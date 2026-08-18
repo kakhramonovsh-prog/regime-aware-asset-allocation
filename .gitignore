@@ -1,0 +1,42 @@
+# Data files are reproducible via scripts/download_data.py and are not
+# committed. The data/README.md documents every series.
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Figures and tables ARE committed (small, and they make the repo
+# self-documenting for reviewers); each run's eda_manifest.json ties them
+# to code/data hashes. Fitted model binaries are regenerated, not committed.
+outputs/models/*
+!outputs/models/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+.coverage
+htmlcov/
+
+# LaTeX build artifacts
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.log
+paper/*.out
+paper/*.synctex.gz
+paper/*.toc
+paper/*.fls
+paper/*.fdb_latexmk
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+paper/number_census_template.csv
+outputs/paper_build/ci_artifact/

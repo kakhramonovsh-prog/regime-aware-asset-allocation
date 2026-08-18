@@ -1,0 +1,5 @@
+check,value,passed
+zero_cost_net_equals_gross,5.88418203051333e-15,True
+higher_costs_weakly_lower_wealth,1.0,True
+cagr_reconciles_with_wealth,6.661338147750939e-15,True
+all_strategies_same_dates,1.0,True

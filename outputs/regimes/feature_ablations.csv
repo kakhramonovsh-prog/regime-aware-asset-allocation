@@ -1,0 +1,3 @@
+specification,n,classification_agreement,probability_correlation,alt_high_vol_share,base_high_vol_share
+drop_vix,200,0.85,0.714421,0.46,0.41
+drop_realized_vol,200,0.82,0.702252,0.57,0.41

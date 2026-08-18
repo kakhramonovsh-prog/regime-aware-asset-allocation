@@ -1,0 +1,5 @@
+strategy,n,solver_success_rate,mean_iterations,max_constraint_violation,mean_cap_binding,fallback_requests
+ewma_scaled_minvar,200,1,6.67,4.4408921e-16,1.465,0
+regime_minvar,200,1,7.54,4.4408921e-16,1.5,0
+rolling_lw_minvar,200,1,8.915,3.3306691e-16,1,0
+static_minvar,200,1,8,0,1,0

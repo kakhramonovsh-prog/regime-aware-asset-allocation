@@ -1,0 +1,15 @@
+{
+  "phase": "12-robustness",
+  "created_at_utc": "2026-08-16T16:05:52+00:00",
+  "git_commit": "7a7c4853a2b635a7eb9dd0c647d3ba522e7249fd",
+  "config_sha256": "3c3dd76044df58c673c20ce4e6983edd5afcd5a03ee0d446dd5599d326a7acd2",
+  "data_snapshot_manifest": "manifest_2026-08-06.json",
+  "data_snapshot_sha256": "6ce35432bae2969dc7598e150f877a3faec5a4453e9da77077b71fb3736715c2",
+  "note": "One-at-a-time robustness grid; no Cartesian product. The 30% cap runs on the five-asset universe only (infeasible for three assets). Subperiods are descriptive slices of the primary paths. No robustness result may be promoted into the headline conclusion.",
+  "artifacts": {
+    "outputs/robustness/robustness_grid.csv": "a39d8adf99e36b1228d3f461bd9a3e758125c8f74aa76177c999d24098ceed27",
+    "outputs/robustness/hmm_diagnostics_by_spec.csv": "b79abcbcc1e344555806171b00e1b424cad691d750ed6b3076fbb5e38393727d",
+    "outputs/robustness/subperiod_descriptive.csv": "11b1f84a2d5fdf0db85c9bb04b83acc319cce4c3bf04edb5093722803efe0a5e",
+    "outputs/figures/robustness_forest.png": "4b49ae3d2bcc7dd240929a429203e005b5278f3a533e73b9b37fd269605fc8ce"
+  }
+}

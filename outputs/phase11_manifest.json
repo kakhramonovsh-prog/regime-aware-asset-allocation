@@ -1,0 +1,17 @@
+{
+  "phase": "11-inference",
+  "created_at_utc": "2026-08-16T00:14:47+00:00",
+  "git_commit": "25737cb756edd8dfd035c7f590123e1bb90babee",
+  "config_sha256": "3c3dd76044df58c673c20ce4e6983edd5afcd5a03ee0d446dd5599d326a7acd2",
+  "data_snapshot_manifest": "manifest_2026-08-06.json",
+  "data_snapshot_sha256": "6ce35432bae2969dc7598e150f877a3faec5a4453e9da77077b71fb3736715c2",
+  "note": "Paired stationary-bootstrap inference on daily excess returns, matching the Phase 10 estimand. Only regime-aware vs rolling Ledoit-Wolf at 10 bps is confirmatory; all other comparisons are secondary or robustness and carry Holm-adjusted p-values. Diebold-Mariano is deliberately not applied to portfolio returns.",
+  "artifacts": {
+    "outputs/inference/primary_bootstrap_draws.parquet": "37b77a05d63c11a205b3bfc5b7f7f7b8bed57a943e78383d71cb130f760ecb26",
+    "outputs/inference/primary_inference_summary.csv": "d08e0e84f52618d2d7d445d2e2b6664ce781981cae22da6080b018f980171386",
+    "outputs/inference/block_length_sensitivity.csv": "66642c777ffb37fec1930033a8a3847161de337335c0b9fbcc59e74b4a011b3f",
+    "outputs/inference/hac_mean_difference.csv": "01a2318868bc414bd6e8df6e4ef38845ef2892cfabecc00f96aa6a5dad46507a",
+    "outputs/inference/secondary_metric_intervals.csv": "a5c31774922c1c69d289454b6c947f5f8b8186579587eeb8d8d103a46f9ec4e6",
+    "outputs/inference/multiple_comparison_adjustments.csv": "003a28db1c8190b87b4d9759e9f86e0e1fd3a7ceb95d1303ec290ef816ceb549"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "generated_at": "2026-08-16T22:56:11+00:00",
+  "this_run": {
+    "path": "C:\\Users\\kakhr\\Projects\\regime-aware-asset-allocation",
+    "commit": "f326227032705bdbaeaa14360492329c60532dd3"
+  },
+  "other_run": {
+    "path": "C:\\Users\\kakhr\\Projects\\regime-aware-clean-test",
+    "commit": "fa8fa58eb47a200076efb7ad010ec2f19745c9c7"
+  },
+  "filtered_probabilities": {
+    "rows_compared": 200,
+    "columns_compared": [
+      "n_obs",
+      "prob_s0",
+      "prob_s1",
+      "high_vol_state_prob",
+      "classified_high_vol",
+      "guard_triggered",
+      "n_failed_inits",
+      "selected_seed",
+      "hmm_probability_used_for_reporting",
+      "fallback_used",
+      "prob_change_vs_prev_month",
+      "classification_changed"
+    ],
+    "max_absolute_difference": 1.4503620526795657e-11,
+    "mean_absolute_difference": 1.413841004909964e-13,
+    "n_exactly_equal": 1913,
+    "n_compared": 2399,
+    "n_missing_in_both": 1,
+    "n_missing_in_one_run_only": 0
+  },
+  "selected_fits": {
+    "origins_compared": 200,
+    "max_absolute_loglik_difference": 0.0,
+    "refits_compared": 199,
+    "selected_seed_disagreements": 0
+  }
+}

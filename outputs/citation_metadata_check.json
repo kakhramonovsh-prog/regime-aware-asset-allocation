@@ -1,0 +1,344 @@
+{
+  "ang2002": {
+    "status": "match",
+    "issues": [
+      "container: bib='The Review of Financial Studies' crossref='Review of Financial Studies'"
+    ],
+    "crossref": {
+      "title": "International Asset Allocation With Regime Shifts",
+      "container": "Review of Financial Studies",
+      "volume": "15",
+      "issue": "4",
+      "page": "1137-1187",
+      "year": 2002,
+      "publisher": "Oxford University Press (OUP)",
+      "type": "journal-article"
+    },
+    "unexplained": []
+  },
+  "ang2012": {
+    "status": "match",
+    "issues": [],
+    "crossref": {
+      "title": "Regime Changes and Financial Markets",
+      "container": "Annual Review of Financial Economics",
+      "volume": "4",
+      "issue": "1",
+      "page": "313-337",
+      "year": 2012,
+      "publisher": "Annual Reviews",
+      "type": "journal-article"
+    },
+    "unexplained": []
+  },
+  "bailey2014": {
+    "status": "match",
+    "issues": [
+      "authors: bib=['bailey', 'borwein', 'lopezdeprado', 'zhu'] crossref=['bailey', 'borwein', 'lpezdeprado', 'zhu']",
+      "pages: bib='458--471' crossref='458'"
+    ],
+    "crossref": {
+      "title": "Pseudo-Mathematics and Financial Charlatanism: The Effects of Backtest Overfitting on Out-of-Sample Performance",
+      "container": "Notices of the American Mathematical Society",
+      "volume": "61",
+      "issue": "5",
+      "page": "458",
+      "year": 2014,
+      "publisher": "American Mathematical Society (AMS)",
+      "type": "journal-article"
+    },
+    "unexplained": []
+  },
+  "bollerslev1986": {
+    "status": "match",
+    "issues": [],
+    "crossref": {
+      "title": "Generalized autoregressive conditional heteroskedasticity",
+      "container": "Journal of Econometrics",
+      "volume": "31",
+      "issue": "3",
+      "page": "307-327",
+      "year": 1986,
+      "publisher": "Elsevier BV",
+      "type": "journal-article"
+    },
+    "unexplained": []
+  },
+  "clarke2011": {
+    "status": "match",
+    "issues": [],
+    "crossref": {
+      "title": "Minimum-Variance Portfolio Composition",
+      "container": "The Journal of Portfolio Management",
+      "volume": "37",
+      "issue": "2",
+      "page": "31-45",
+      "year": 2011,
+      "publisher": "With Intelligence LLC",
+      "type": "journal-article"
+    },
+    "unexplained": []
+  },
+  "demiguel2009": {
+    "status": "match",
+    "issues": [
+      "title: bib='Optimal Versus Naive Diversification: How Inefficient is the 1/{N} Portfolio Strategy?' crossref='Optimal Versus Naive Diversification: How Inefficient is the 1/<i>N</i>Portfolio Strategy?'",
+      "container: bib='The Review of Financial Studies' crossref='Review of Financial Studies'",
+      "year: bib='2009' crossref='2007'"
+    ],
+    "crossref": {
+      "title": "Optimal Versus Naive Diversification: How Inefficient is the 1/<i>N</i>Portfolio Strategy?",
+      "container": "Review of Financial Studies",
+      "volume": "22",
+      "issue": "5",
+      "page": "1915-1953",
+      "year": 2007,
+      "publisher": "Oxford University Press (OUP)",
+      "type": "journal-article"
+    },
+    "unexplained": []
+  },
+  "dempster1977": {
+    "status": "match",
+    "issues": [
+      "title: bib='Maximum Likelihood from Incomplete Data via the {EM} Algorithm' crossref='Maximum Likelihood from Incomplete Data Via the\\n                    <i>EM</i>\\n                    Algorithm'",
+      "container: bib='Journal of the Royal Statistical Society: Series B' crossref='Journal of the Royal Statistical Society Series B: Statistical Methodology'"
+    ],
+    "crossref": {
+      "title": "Maximum Likelihood from Incomplete Data Via the\n                    <i>EM</i>\n                    Algorithm",
+      "container": "Journal of the Royal Statistical Society Series B: Statistical Methodology",
+      "volume": "39",
+      "issue": "1",
+      "page": "1-22",
+      "year": 1977,
+      "publisher": "Oxford University Press (OUP)",
+      "type": "journal-article"
+    },
+    "unexplained": []
+  },
+  "diebold1995": {
+    "status": "match",
+    "issues": [
+      "container: bib='Journal of Business \\\\& Economic Statistics' crossref='Journal of Business &amp; Economic Statistics'"
+    ],
+    "crossref": {
+      "title": "Comparing Predictive Accuracy",
+      "container": "Journal of Business &amp; Economic Statistics",
+      "volume": "13",
+      "issue": "3",
+      "page": "253-263",
+      "year": 1995,
+      "publisher": "Informa UK Limited",
+      "type": "journal-article"
+    },
+    "unexplained": []
+  },
+  "engle1982": {
+    "status": "match",
+    "issues": [
+      "pages: bib='987--1007' crossref='987'"
+    ],
+    "crossref": {
+      "title": "Autoregressive Conditional Heteroscedasticity with Estimates of the Variance of United Kingdom Inflation",
+      "container": "Econometrica",
+      "volume": "50",
+      "issue": "4",
+      "page": "987",
+      "year": 1982,
+      "publisher": "JSTOR",
+      "type": "journal-article"
+    },
+    "unexplained": []
+  },
+  "guidolin2007": {
+    "status": "match",
+    "issues": [],
+    "crossref": {
+      "title": "Asset allocation under multivariate regime switching",
+      "container": "Journal of Economic Dynamics and Control",
+      "volume": "31",
+      "issue": "11",
+      "page": "3503-3544",
+      "year": 2007,
+      "publisher": "Elsevier BV",
+      "type": "journal-article"
+    },
+    "unexplained": []
+  },
+  "hamilton1989": {
+    "status": "match",
+    "issues": [
+      "pages: bib='357--384' crossref='357'"
+    ],
+    "crossref": {
+      "title": "A New Approach to the Economic Analysis of Nonstationary Time Series and the Business Cycle",
+      "container": "Econometrica",
+      "volume": "57",
+      "issue": "2",
+      "page": "357",
+      "year": 1989,
+      "publisher": "JSTOR",
+      "type": "journal-article"
+    },
+    "unexplained": []
+  },
+  "harvey2015": {
+    "status": "match",
+    "issues": [],
+    "crossref": {
+      "title": "Backtesting",
+      "container": "The Journal of Portfolio Management",
+      "volume": "42",
+      "issue": "1",
+      "page": "13-28",
+      "year": 2015,
+      "publisher": "With Intelligence LLC",
+      "type": "journal-article"
+    },
+    "unexplained": []
+  },
+  "harvey2016": {
+    "status": "match",
+    "issues": [
+      "container: bib='The Review of Financial Studies' crossref='Review of Financial Studies'",
+      "year: bib='2016' crossref='2015'"
+    ],
+    "crossref": {
+      "title": "\u2026 and the Cross-Section of Expected Returns",
+      "container": "Review of Financial Studies",
+      "volume": "29",
+      "issue": "1",
+      "page": "5-68",
+      "year": 2015,
+      "publisher": "Oxford University Press (OUP)",
+      "type": "journal-article"
+    },
+    "unexplained": []
+  },
+  "holm1979": {
+    "status": "adjudicated (no doi)",
+    "issues": []
+  },
+  "jagannathan2003": {
+    "status": "match",
+    "issues": [],
+    "crossref": {
+      "title": "Risk Reduction in Large Portfolios: Why Imposing the Wrong Constraints Helps",
+      "container": "The Journal of Finance",
+      "volume": "58",
+      "issue": "4",
+      "page": "1651-1683",
+      "year": 2003,
+      "publisher": "Wiley",
+      "type": "journal-article"
+    },
+    "unexplained": []
+  },
+  "ledoit2004": {
+    "status": "match",
+    "issues": [],
+    "crossref": {
+      "title": "A well-conditioned estimator for large-dimensional covariance matrices",
+      "container": "Journal of Multivariate Analysis",
+      "volume": "88",
+      "issue": "2",
+      "page": "365-411",
+      "year": 2004,
+      "publisher": "Elsevier BV",
+      "type": "journal-article"
+    },
+    "unexplained": []
+  },
+  "ledoit2008": {
+    "status": "match",
+    "issues": [],
+    "crossref": {
+      "title": "Robust performance hypothesis testing with the Sharpe ratio",
+      "container": "Journal of Empirical Finance",
+      "volume": "15",
+      "issue": "5",
+      "page": "850-859",
+      "year": 2008,
+      "publisher": "Elsevier BV",
+      "type": "journal-article"
+    },
+    "unexplained": []
+  },
+  "markowitz1952": {
+    "status": "match",
+    "issues": [],
+    "crossref": {
+      "title": "PORTFOLIO SELECTION*",
+      "container": "The Journal of Finance",
+      "volume": "7",
+      "issue": "1",
+      "page": "77-91",
+      "year": 1952,
+      "publisher": "Wiley",
+      "type": "journal-article"
+    },
+    "unexplained": []
+  },
+  "michaud1989": {
+    "status": "match",
+    "issues": [],
+    "crossref": {
+      "title": "The Markowitz Optimization Enigma: Is \u2018Optimized\u2019 Optimal?",
+      "container": "Financial Analysts Journal",
+      "volume": "45",
+      "issue": "1",
+      "page": "31-42",
+      "year": 1989,
+      "publisher": "Informa UK Limited",
+      "type": "journal-article"
+    },
+    "unexplained": []
+  },
+  "newey1987": {
+    "status": "match",
+    "issues": [
+      "pages: bib='703--708' crossref='703'"
+    ],
+    "crossref": {
+      "title": "A Simple, Positive Semi-Definite, Heteroskedasticity and Autocorrelation Consistent Covariance Matrix",
+      "container": "Econometrica",
+      "volume": "55",
+      "issue": "3",
+      "page": "703",
+      "year": 1987,
+      "publisher": "JSTOR",
+      "type": "journal-article"
+    },
+    "unexplained": []
+  },
+  "patton2011": {
+    "status": "match",
+    "issues": [],
+    "crossref": {
+      "title": "Volatility forecast comparison using imperfect volatility proxies",
+      "container": "Journal of Econometrics",
+      "volume": "160",
+      "issue": "1",
+      "page": "246-256",
+      "year": 2011,
+      "publisher": "Elsevier BV",
+      "type": "journal-article"
+    },
+    "unexplained": []
+  },
+  "politis1994": {
+    "status": "match",
+    "issues": [],
+    "crossref": {
+      "title": "The Stationary Bootstrap",
+      "container": "Journal of the American Statistical Association",
+      "volume": "89",
+      "issue": "428",
+      "page": "1303-1313",
+      "year": 1994,
+      "publisher": "Informa UK Limited",
+      "type": "journal-article"
+    },
+    "unexplained": []
+  }
+}

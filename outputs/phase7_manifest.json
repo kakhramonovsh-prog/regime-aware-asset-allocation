@@ -1,0 +1,14 @@
+{
+  "phase": "7-covariance",
+  "created_at_utc": "2026-08-15T23:44:27+00:00",
+  "git_commit": "b8698c52d7ca052ad5b8c5796986a0008a665767",
+  "config_sha256": "e68cd27a440c9f9a2b961d7b472ce2d4864e97e33442e8a1e5cd23f0211289ad",
+  "data_snapshot_manifest": "manifest_2026-08-06.json",
+  "data_snapshot_sha256": "6ce35432bae2969dc7598e150f877a3faec5a4453e9da77077b71fb3736715c2",
+  "note": "Covariance estimation and conditioning diagnostics only. All estimators use returns through the rebalance origin; state-conditioned estimates use smoothed responsibilities from the HMM fit through that origin. No optimizer weights or portfolio returns were computed or examined.",
+  "artifacts": {
+    "outputs/covariance/covariance_audit.csv": "62dfb5dbf4fa9b461379765b7b791925e3c7605d684bf217e147756d0e816949",
+    "outputs/covariance/consumed_covariances.parquet": "113f387fd225bd0d0022f442a99e2926852ed4d602e89b434e8ec6e3ad237591",
+    "outputs/covariance/conditioning_summary.csv": "da4f0313ac2c9ddf3c5d8239b37c33b7ca26a578ccdc280c08feb2d362cc2b3d"
+  }
+}

@@ -1,0 +1,27 @@
+parameter,value,source
+n_states,2,preregistered
+n_initializations,16,preregistered
+init_seeds,42..57,preregistered
+selection_rule,max training log-likelihood,preregistered
+min_state_occupancy,0.05,preregistered
+estimation_scheme,"expanding window, monthly refit",preregistered
+feature_order,"mkt_log_return, realized_vol_21d, log_vix_lag1, yield_slope_lag1",preregistered
+standardization,"expanding z-score, estimation window only",preregistered
+macro_signal_lag_days,1,preregistered
+trading_signal,endpoint filtered probability only,preregistered
+first_signal_origin,2009-12-31,preregistered
+covariance_type,full,implementation decision
+n_iter,200,implementation decision
+convergence_tol,0.0001,implementation decision
+min_covar,0.001,implementation decision
+initialization,"hmmlearn default (kmeans means, uniform start/trans)",implementation decision
+selection_tol_rel,1e-10,implementation decision
+selection_tie_break,lowest seed within tolerance,implementation decision
+min_eigenvalue_guard,1e-08,implementation decision
+absorbing_state_threshold,diag(P) >= 1 - 1e-12,implementation decision
+n_eff_formula,(sum gamma)^2 / sum(gamma^2),implementation decision
+failure_rule,non-usable starts excluded; RuntimeError if all fail (no silent fallback),implementation decision
+guard_rule,occupancy/singular-covariance/absorbing flags recorded per refit,implementation decision
+min_realized_vol_observed,0.0341569,data property
+zero_realized_vol_days,0,data property
+near_zero_rv_handling,none required: realized vol is strictly positive in-sample (no log transform is applied to it),implementation decision

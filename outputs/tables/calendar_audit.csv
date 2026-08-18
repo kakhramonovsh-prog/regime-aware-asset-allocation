@@ -1,0 +1,9 @@
+check,value
+n_days,5462
+first_date,2004-11-18
+last_date,2026-08-06
+n_duplicate_dates,0
+n_weekend_rows,0
+max_calendar_gap_days,5
+n_gaps_over_4d,2
+long_gap_dates,2007-01-03 (5d); 2012-10-31 (5d)

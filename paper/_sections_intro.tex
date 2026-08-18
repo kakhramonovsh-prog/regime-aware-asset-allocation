@@ -1,0 +1,134 @@
+\section{Introduction}
+\label{sec:introduction}
+
+A minimum-variance portfolio of five US exchange-traded funds that
+conditioned its covariance forecast on volatility states inferred in
+real time earned an annualized Sharpe ratio \primarySharpeDiff{} higher
+than the same portfolio without regime conditioning over 2010--2026, net
+of 10 basis points in transaction costs. The 95\% confidence interval on
+that difference runs from \primaryCiLower{} to \primaryCiUpper{}. The
+strategy did what the theory predicts, realizing \volDifferenceMagnitude{}
+lower annualized volatility, but it traded \turnoverRatio{} times as much
+as its comparator, and the estimated advantage falls monotonically as costs
+rise. On this evidence, regime conditioning delivers a measurable risk
+reduction too small relative to sampling variation to establish a
+risk-adjusted improvement once trading costs are paid.
+
+The design was fixed before the data were touched. I published the
+hypothesis, the comparator, the sample split, the cost convention and
+all thirteen robustness specifications, and version-tagged them in a
+public repository before estimating a single model. Four later
+amendments each carry a date and a record of what was known when I made
+them; three were adopted before any portfolio return existed. The
+comparison reported here is the one committed to in advance, not the one
+that survived a search. Preregistration, frozen data, causal tests,
+automated validation and dated amendments substantially constrained
+ex-post researcher discretion, though they did not eliminate it.
+
+The choice of comparator does most of the analytical work. Regime-aware
+minimum variance beats equal weight and 60/40 comfortably on realized
+Sharpe, and a study could stop there and report an improvement. It
+should not. Those benchmarks differ from the regime strategy in
+optimization, covariance estimation and regime conditioning at the same
+time, so a gap between them attributes nothing to any single ingredient.
+I therefore compare against rolling Ledoit--Wolf minimum variance, which
+shares every ingredient except the regime signal. The \primarySharpeDiff{}
+difference measures what regime conditioning adds on top of dynamic
+covariance estimation, and it is not distinguishable from zero.
+
+Three findings temper the point estimate further. The sign reverses
+under a three-state specification and when realized volatility is
+dropped from the feature set. It reverses again between the pre- and
+post-2020 halves of the sample. And after Holm adjustment across the
+robustness family, no specification retains significance. Set against
+these, a positive point estimate with an interval \ciWidthMultiple{} times
+its width is best read as inconclusive about small effects rather than as evidence
+of either a benefit or its absence.
+
+This paper contributes in three ways. It tests a regime-conditioning
+strategy under a preregistered design with a matched comparator, which
+is uncommon in the backtesting literature and directly addresses the
+multiple-testing critique. It reports the full ablation ladder, showing
+where risk-adjusted gains actually arise: mostly from optimization
+itself rather than from dynamic covariance or regime conditioning. And
+it documents an interaction the design did not anticipate, in which
+portfolio constraints moved the estimated difference more than any
+modelling choice examined.
+
+\section{Related literature}
+\label{sec:literature}
+
+Three strands bear directly on this study.
+
+\citet{hamilton1989} introduced the regime-switching framework this
+paper applies, and with it the discipline that states are latent and
+inferred rather than observed. That distinction governs the empirical
+design here: the trading signal is the filtered probability at the
+decision date, never a smoothed path that conditions on data the
+investor did not have. The volatility clustering the framework describes
+was documented by \citet{engle1982} and generalized by
+\citet{bollerslev1986}; this paper does not revisit it, asking instead
+whether acting on it survives out-of-sample testing net of costs.
+
+Applying regime switching to allocation has a substantial literature.
+\citet{ang2002} document regime shifts in international equity
+correlations and their allocation consequences, \citet{guidolin2007}
+solve multivariate regime-switching allocation problems, and
+\citet{ang2012} survey the field. This paper's contribution is narrower
+and more sceptical than a survey of that work would suggest: it holds
+three things fixed at once --- states inferred strictly in real time, a
+comparator differing by the regime signal alone, and trading costs
+charged on realized turnover --- and preregisters the comparison before
+estimating anything. The question is not whether regimes exist or
+whether conditioning on them helps in principle, but what the
+conditioning is worth after those three constraints are imposed
+simultaneously.
+
+\citet{demiguel2009} provide the closest methodological precedent. They
+evaluate fourteen portfolio models across seven datasets and find that
+none consistently outperforms naive 1/N allocation on Sharpe ratio,
+certainty-equivalent return or turnover, concluding that estimation
+error more than offsets the theoretical gain from optimization. Their
+framing is the model for this study: a negative out-of-sample result
+becomes informative when it identifies the mechanism by which a
+theoretically superior method fails. The question here is one rung
+further along --- optimization is granted, and the test is whether
+regime conditioning adds anything on top of it.
+
+\citet{harvey2015} and \citet{harvey2016} supply the inferential
+standard. Documenting that hundreds of factors have been tested in the
+cross-sectional literature, they argue that conventional significance
+thresholds no longer establish anything and propose haircuts for
+reported Sharpe ratios that account for the number of trials.
+Preregistering a single primary comparison and applying Holm adjustment
+across an explicitly bounded robustness family is a direct response to
+that critique: the number of trials is fixed and published in advance
+rather than reconstructed afterward.
+
+The portfolio problem is \citet{markowitz1952} with the mean removed.
+\citet{michaud1989} sets out why sample mean-variance optimization
+performs poorly out of sample, which is the reason no strategy here uses
+expected-return forecasts, and \citet{clarke2011} characterize what
+minimum-variance portfolios actually hold. \citet{jagannathan2003} show
+that imposing constraints which are wrong as beliefs can nonetheless
+reduce estimation error and improve realized risk --- a result that
+bears directly on the constraint interaction reported in
+Section~\ref{sec:robustness}.
+
+On methods, the covariance estimator follows \citet{ledoit2004}, whose
+shrinkage approach is designed for exactly the near-collinear setting
+observed here, where the equity block carries pairwise correlations
+between \equityCorrMin{} and \equityCorrMax{}. The hidden Markov model is estimated by the EM
+algorithm of \citet{dempster1977}. Volatility forecast evaluation uses
+QLIKE following \citet{patton2011}, who shows that rankings can be
+distorted when noisy volatility proxies are evaluated under
+inappropriate loss functions, with pairwise comparisons following
+\citet{diebold1995}. Inference uses the stationary bootstrap of
+\citet{politis1994}, chosen because portfolio returns are serially
+dependent and independent resampling would understate uncertainty;
+\citet{ledoit2008} develop the robust Sharpe-ratio test that motivates
+bootstrapping the difference rather than comparing ratios directly.
+Standard errors on mean differences use \citet{newey1987}, and
+multiplicity is handled by \citet{holm1979}. \citet{bailey2014} give
+the sharpest statement of why backtested performance requires this kind
+of discipline.

@@ -1,0 +1,109 @@
+# =============================================================================
+# Central configuration for the regime-aware asset allocation project.
+#
+# Every script and notebook reads parameters from this file so that a single
+# change here propagates through the entire pipeline. Do not hard-code dates,
+# tickers, or windows anywhere else.
+# =============================================================================
+
+project:
+  name: regime-aware-asset-allocation
+  random_seed: 42
+
+manuscript:
+  # Frozen date printed on the title page. This must never be \today:
+  # a clean-clone rebuild on a later day would change page 1 and with it
+  # the PDF hash that the visual inspection attests to, so the release
+  # artifact would stop being reproducible the day after it was made.
+  # Bump this deliberately when cutting a new manuscript release.
+  release_date: "2026-08-17"
+
+data:
+  # GLD (the youngest asset in the universe) began trading 2004-11-18.
+  # Raw downloads start at inception; the aligned analysis sample effectively
+  # begins in early 2005 once all five ETFs have prices.
+  start_date: "2004-11-18"
+  end_date: null            # null = download through the most recent close
+
+  price_source: yfinance    # Yahoo Finance via the yfinance package
+  macro_source: fred        # St. Louis Fed FRED via pandas-datareader
+
+  # Asset universe: five liquid US-listed ETFs spanning equities, duration,
+  # and gold. ETFs avoid single-name survivorship problems, but note in the
+  # paper that the universe itself was chosen with hindsight (see README
+  # Limitations).
+  tickers:
+    SPY: "SPDR S&P 500 ETF (US large-cap equities)"
+    QQQ: "Invesco QQQ Trust (Nasdaq-100, large-cap growth)"
+    IWM: "iShares Russell 2000 ETF (US small-cap equities)"
+    IEF: "iShares 7-10 Year Treasury Bond ETF (intermediate duration)"
+    GLD: "SPDR Gold Shares (gold bullion)"
+
+  # FRED series. DFF is used instead of FEDFUNDS because DFF is daily while
+  # FEDFUNDS is a monthly average.
+  fred_series:
+    VIXCLS: "CBOE Volatility Index, daily close (index points)"
+    DGS2: "2-Year Treasury constant-maturity yield (percent, daily)"
+    DGS10: "10-Year Treasury constant-maturity yield (percent, daily)"
+    T10Y2Y: "10-Year minus 2-Year Treasury spread (percent, daily)"
+    DFF: "Effective Federal Funds Rate (percent, daily)"
+
+  raw_dir: data/raw
+  processed_dir: data/processed
+
+  # Maximum consecutive trading days a macro series may be forward-filled.
+  # Yields and VIX closes remain valid information after a market holiday,
+  # but a gap longer than this signals a data problem and raises an error.
+  macro_ffill_limit: 5
+
+  # FRED series are lagged one extra trading day before entering any
+  # trading signal (H.15 publication lag; see docs/research_design.md §3).
+  macro_signal_lag_days: 1
+
+preprocessing:
+  vol_windows: [21, 63]        # trading days (~1 month, ~3 months)
+  corr_window: 63
+  trading_days_per_year: 252
+
+benchmark:
+  # Conventional static benchmark: 60% US equities / 40% Treasuries.
+  weights:
+    SPY: 0.60
+    IEF: 0.40
+
+# The frozen values below mirror config/analysis_plan.yaml (preregistered,
+# tag v0.2.0-preregistered). tests/test_analysis_plan.py enforces the match.
+
+volatility_models:            # Phase 5 (not yet implemented)
+  ewma_lambda: 0.94           # RiskMetrics daily decay
+  garch: { p: 1, q: 1 }
+  hist_window_days: 63
+  portfolio_model: ewma_lambda_094   # fixed ex ante
+
+regimes:                       # Phase 6 (not yet implemented)
+  n_states_main: 2
+  n_states_alt: 3
+  features: [mkt_log_return, realized_vol_21d, log_vix_lag1, yield_slope_lag1]
+  n_initializations: 16
+  init_seeds_start: 42         # seeds 42..57
+  min_state_occupancy: 0.05
+
+portfolio:                     # Phase 8 (not yet implemented)
+  max_weight: 0.40
+  allow_short: false
+  fully_invested: true
+  strategies:                  # ablation ladder (docs/research_design.md §7)
+    - equal_weight
+    - static_6040_monthly
+    - static_minvar_training_window
+    - rolling_lw_minvar
+    - vol_scaled_minvar_ewma
+    - regime_minvar
+
+backtest:                      # Phase 9 (not yet implemented)
+  rebalance_frequency: monthly
+  training_end: "2009-12-31"
+  oos_start: "2010-01-01"
+  execution_lag_days: 1        # signal at close t, trade at close t+1
+  transaction_cost_bps: [0, 5, 10, 20]
+  main_cost_bps: 10

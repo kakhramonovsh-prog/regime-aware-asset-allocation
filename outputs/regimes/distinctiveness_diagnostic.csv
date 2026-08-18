@@ -1,0 +1,3 @@
+benchmark_rule,n,agreement_rate,cohens_kappa,hmm_high_vol_share,rule_high_vol_share
+log_vix_lag1 > expanding median,200,0.81,0.617244,0.41,0.48
+realized_vol_21d > expanding median,200,0.77,0.529845,0.41,0.44

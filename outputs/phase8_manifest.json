@@ -1,0 +1,14 @@
+{
+  "phase": "8-strategies",
+  "created_at_utc": "2026-08-15T23:44:34+00:00",
+  "git_commit": "b8698c52d7ca052ad5b8c5796986a0008a665767",
+  "config_sha256": "e68cd27a440c9f9a2b961d7b472ce2d4864e97e33442e8a1e5cd23f0211289ad",
+  "data_snapshot_manifest": "manifest_2026-08-06.json",
+  "data_snapshot_sha256": "6ce35432bae2969dc7598e150f877a3faec5a4453e9da77077b71fb3736715c2",
+  "note": "Target weights only. No portfolio return, transaction cost, turnover, Sharpe ratio, or cumulative wealth was computed or examined. Failed optimizations emit no weights and set fallback_requested for Phase 9 to treat as no trade.",
+  "artifacts": {
+    "outputs/strategies/target_weights.parquet": "a53fda6e7bffe3c83ce10e56db2ba90c6317ec5b9ad20a9c212f227a378da188",
+    "outputs/strategies/optimizer_audit.csv": "3352ede12d8f3bf1c117ec2b9ade5f0bb76bef096397fca2f54963a38748c14d",
+    "outputs/strategies/optimizer_summary.csv": "98aa224f0f2eb5c7323b8b7651e549dccfd313e394941486c84cb661a713b81c"
+  }
+}

@@ -1,0 +1,12 @@
+check,passed,detail
+Holm input is the centered-null one-sided p,True,column p_one_sided_centered from centered_bootstrap_pvalue()
+Holm family excludes the Phase 11 primary,True,12 specs adjusted; primary left unadjusted
+Holm values are weakly larger than unadjusted,True,monotone adjustment
+All specifications use net returns at 10 bps,True,grid contains no cost-varying specification; cost sensitivity lives in the Phase 11 secondary family
+"Forest plot order is conceptual, not performance-sorted",True,row order equals build_specifications() declaration order
+"Common-window specs share start, end and observation count",True,"start=2010-01-04, end=2026-08-06, n=4173"
+Three-state reports all occupancies and effective sample sizes,True,3 occupancy + 3 n_eff columns
+Middle state is not degenerate (or is flagged),True,"middle occupancy 0.454, degenerate flags 0"
+Canonical low<med<high ordering holds,True,0.0999 < 0.1367 < 0.3215
+"Failure counts reported for every spec, zeros included",True,five event columns present on all rows
+Subperiods labeled descriptive only,True,5 subperiods

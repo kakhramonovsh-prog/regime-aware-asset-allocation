@@ -1,0 +1,22 @@
+{
+  "phase": "10-performance",
+  "created_at_utc": "2026-08-16T00:04:12+00:00",
+  "git_commit": "59f627d01f8c0554dcdddb04da1aade4fe346b4d",
+  "config_sha256": "3c3dd76044df58c673c20ce4e6983edd5afcd5a03ee0d446dd5599d326a7acd2",
+  "data_snapshot_manifest": "manifest_2026-08-06.json",
+  "data_snapshot_sha256": "6ce35432bae2969dc7598e150f877a3faec5a4453e9da77077b71fb3736715c2",
+  "note": "Descriptive performance metrics computed from the stored Phase 9 return series; the backtest was not re-run. Differences between strategies are point estimates only. No statistical significance is claimed or tested here; that is Phase 11.",
+  "artifacts": {
+    "outputs/performance/performance_summary.csv": "70a46acf98345025cd300723c10683d2a27bc7bedb8416b2498cebbe607f75e3",
+    "outputs/performance/safeguard_checks.csv": "70bf518c70ab21de25bedc5d1661f43a9b80e4db8b52412ac751a2ea37de2282",
+    "outputs/performance/wealth_paths_10bps.parquet": "16ba0e50bb6fa8ce6079b1d52433ead7515be34d0e2602fc4693d52648b3ef02",
+    "outputs/performance/drawdown_paths_10bps.parquet": "ae25b184a6f95b38987535f5b6e8eeefe0aaf81f80d651f974104db870e63d7d",
+    "outputs/performance/rolling_sharpe_10bps.parquet": "e028ec00121b99ef65d3c274c17b1ed6a79d7b9efed2b049992fab49c1294449",
+    "outputs/figures/cumulative_growth.png": "5d148347b3ab5d13968e053814cfcadf9d81f1aab2f579e1969fc212d0a9f4d5",
+    "outputs/figures/strategy_drawdowns.png": "583459d073e371ad5ef4b5fb02f2e008eba1cd533e8c7f8ec30ac1946734fcd4",
+    "outputs/figures/rolling_sharpe.png": "b3d59bdb8f65fc2cc5170724b2ac8d8c7df70dc90c31604d9ac7cba85d3e5c1b",
+    "outputs/figures/weights_regime_minvar.png": "3824680d7121b92987ba3f8aec016e8373d5579ab95078f8198be8dbef455605",
+    "outputs/figures/weights_rolling_lw_minvar.png": "f0c80de4e2f2df44b15c58b7d5b0ed14cfa473f8e5daa16c745f1b0d6f43c645",
+    "outputs/figures/turnover.png": "92046100e4c1ae3b57626d3c94fc904776f6d66166fd0c84fac5b5769290be35"
+  }
+}

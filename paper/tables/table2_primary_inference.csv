@@ -1,0 +1,5 @@
+label,metric,raw_value,display_value,display_unit,formatted
+regime_minvar minus rolling_lw_minvar,sharpe_difference,0.0209655185418421,0.0209655185418421,,0.021
+regime_minvar minus rolling_lw_minvar,ci95_lower,-0.0748040227350396,-0.0748040227350396,,-0.075
+regime_minvar minus rolling_lw_minvar,ci95_upper,0.1147052243167773,0.1147052243167773,,0.115
+regime_minvar minus rolling_lw_minvar,p_value,0.3273,0.3273,,0.327

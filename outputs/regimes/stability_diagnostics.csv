@@ -1,0 +1,24 @@
+concept,quantity,mean,std,min,max,n_non_finite
+parameter dispersion across refits,occupancy_s0,0.64465,0.0560255,0.387287,0.705744,0
+parameter dispersion across refits,n_eff_s0,2216.78,862.58,673.082,3684.49,0
+parameter dispersion across refits,persistence_s0,0.99298,0.00300992,0.98977,0.998624,0
+parameter dispersion across refits,expected_duration_s0,210.51,172.283,97.7511,726.905,0
+parameter dispersion across refits,mean_realized_vol_s0,0.110838,0.00806615,0.101943,0.128442,0
+parameter dispersion across refits,occupancy_s1,0.35535,0.0560255,0.294256,0.612713,0
+parameter dispersion across refits,n_eff_s1,1181.31,399.699,435.969,1867.77,0
+parameter dispersion across refits,persistence_s1,0.986525,0.0069219,0.978428,1,0
+parameter dispersion across refits,expected_duration_s1,167.657,217.625,46.356,908.775,4
+parameter dispersion across refits,mean_realized_vol_s1,0.260401,0.0124931,0.229107,0.29934,0
+model revision (same overlapping window),mean_abs_prob_revision,0.00541501,0.0263136,3.84011e-05,0.270169,
+model revision (same overlapping window),max_abs_prob_revision,0.197224,0.267655,0.0102758,1,
+model revision (same overlapping window),prob_revision_corr,0.991643,0.051366,0.42947,0.999999,
+model revision (same overlapping window),classification_agreement,0.994582,0.0263211,0.730137,1,
+model revision (same overlapping window),mean_drift_l2,0.032375,0.088257,0.00246786,0.816525,
+model revision (same overlapping window),transmat_drift_l1,0.000938135,0.00207396,2.68923e-07,0.0258714,
+"state evolution (market conditions, NOT instability)",abs_monthly_change_in_endpoint_prob,0.157622,0.346645,0,0.999999,
+counts,n_refits,200,,,,
+counts,n_classification_changes,31,,,,
+counts,n_selected_seed_changes,152,,,,
+counts,n_guard_triggered,4,,,,
+counts,n_failed_initializations,0,,,,
+counts,n_refits_with_multiple_fits_in_selection_tol,108,,,,

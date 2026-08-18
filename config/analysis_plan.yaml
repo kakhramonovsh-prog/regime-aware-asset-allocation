@@ -1,0 +1,230 @@
+# =============================================================================
+# PREREGISTERED ANALYSIS PLAN — FROZEN 2026-08-15 (tag v0.2.0-preregistered)
+#
+# This file is the machine-readable record of the empirical design frozen
+# BEFORE any model was estimated or any backtest was run. It is never edited
+# after the freeze; deviations are documented in docs/research_design.md.
+# tests/test_analysis_plan.py asserts the runtime config matches this plan.
+# Prose rationale for every choice: docs/research_design.md.
+# =============================================================================
+
+meta:
+  frozen_date: "2026-08-15"
+  tag: v0.2.0-preregistered
+  results_existing_at_freeze: false
+
+hypothesis:
+  h0: "net Sharpe(regime-aware min-var) - net Sharpe(rolling Ledoit-Wolf min-var) <= 0"
+  primary_strategy: regime_minvar
+  primary_comparator: rolling_lw_minvar          # closest non-regime strategy
+  primary_outcome: annualized_oos_sharpe_difference_net
+  primary_cost_bps: 10
+  interval: stationary_bootstrap_95
+  secondary_outcomes:
+    - annualized_return
+    - annualized_volatility
+    - max_drawdown
+    - sortino
+    - calmar
+    - turnover_one_way
+    - total_cost_drag
+    - certainty_equivalent_crra5
+
+sample:
+  data_snapshot: data/snapshots/manifest_2026-08-06.json
+  full_start: "2004-11-18"
+  full_end: "2026-08-06"
+  training_end: "2009-12-31"
+  oos_start: "2010-01-01"
+  estimation_scheme: expanding
+  rebalance_frequency: monthly          # signal on last trading day of month
+
+timeline:
+  signal_close: t                        # info through close of month-end t
+  execution_close: t_plus_1              # trade at next trading day's close
+  first_new_weight_return: t1_to_t2      # new weights earn from t+1 -> t+2
+  costs_charged_on: execution_date
+  macro_signal_lag_days: 1               # all FRED series lagged one extra day
+  price_feature_lag_days: 0              # price-derived features usable at t
+
+volatility:
+  models: [rolling_hist_63d, ewma_lambda_094, garch_1_1_normal]
+  portfolio_model: ewma_lambda_094       # fixed ex ante; loss comparison cannot promote another
+  ewma_lambda: 0.94
+  hist_window_days: 63
+  garch: { p: 1, q: 1, dist: normal }
+  min_observations: 252
+  horizon: holding_period_integrated_variance
+  primary_loss: qlike
+  secondary_losses: [mae, rmse]
+  pairwise_tests: diebold_mariano_hac
+  variance_floor_daily: 1.0e-8
+  garch_failure_policy: substitute_ewma_and_log
+
+hmm:
+  n_states_main: 2
+  n_states_robustness: 3
+  features_main: [mkt_log_return, realized_vol_21d, log_vix_lag1, yield_slope_lag1]
+  standardization: expanding_zscore_through_t
+  probabilities_for_trading: filtered_at_t_only
+  smoothed_probabilities: expost_descriptive_only
+  n_initializations: 16
+  init_seeds_start: 42                   # seeds 42..57 inclusive
+  init_selection: max_training_loglikelihood
+  label_rule: ascending_state_mean_realized_vol   # state 0 = lower vol
+  min_state_occupancy: 0.05
+  degenerate_fit_fallback: unconditional_ledoit_wolf_logged
+
+regime_covariance:
+  horizon_days: 21
+  state_probabilities: horizon_averaged_transition_powers
+  state_cov_estimator: responsibility_weighted_shrunk_to_ledoit_wolf
+  responsibilities: smoothed_given_information_through_t   # Amendment A1
+  neff_threshold: 60          # ~1 quarter of daily data; rationale in design doc §6 (A1)
+  neff_shrinkage_rule: "mix weight n_eff/(n_eff+60) toward unconditional"
+  psd_eigenvalue_floor: 1.0e-10
+  # Amendment A2: degenerate fits do not supply a regime-conditioned
+  # covariance; the probability itself is preserved and reported.
+  # Amendment A3: state estimators are CENTERED covariances; the main
+  # mixture is within-state only (implicitly assumes common conditional
+  # means, consistent with the no-expected-returns rule). The complete
+  # law-of-total-covariance version is a robustness case.
+  state_estimator: centered_covariance
+  mixture_formula: within_state_only
+  mixture_formula_robustness: total_covariance_with_between_state_term
+  report_omitted_between_state_norm: true
+  shrinkage_alpha: "n_eff / (n_eff + 60)  # weight ON the state estimate"
+  responsibilities_source: smoothed_from_fit_through_t
+  degeneracy_fallback: unconditional_ledoit_wolf
+  degeneracy_reasons: [absorbing_transition, degenerate_occupancy, singular_covariance]
+  absorbing_threshold: "diag(P) >= 1 - 1e-12"
+  fallback_preserves_probability: true
+
+portfolio:
+  strategies_main:                       # ablation ladder, in order
+    - equal_weight
+    - static_6040_monthly
+    - static_minvar_training_window
+    - rolling_lw_minvar
+    - vol_scaled_minvar_ewma
+    - regime_minvar
+  robustness_benchmarks: [inverse_volatility, static_6040_buy_and_hold]
+  long_only: true
+  fully_invested: true
+  max_weight: 0.40
+  expected_return_forecasts: none
+  optimizer: scipy_slsqp
+  optimizer_failure_policy: hold_drifted_previous_weights_and_log
+  volatility_targeting: excluded_from_main   # cash-sleeve variant = optional extension
+
+costs:
+  convention: "cost = c * sum_i |w_target_i - w_pretrade_drifted_i|; reported turnover = half that sum"
+  main_bps: 10
+  sensitivity_bps: [0, 5, 20]
+  store_gross_costs_net_separately: true
+  # Amendment A4
+  initial_entry_from_cash: true          # w^- = 0 at first execution; trade sum = 1
+  accounting_identity: "1 + r_net = (1 + r_gross) * (1 - TC)"
+  additive_cost_subtraction: false       # net = gross - cost is NOT used
+  drift_frequency: daily                 # recurrence applied every trading day
+  returns_convention: simple             # log returns remain for estimation only
+  costs_alter_holdings: false            # weight path identical across cost levels
+
+metrics:                        # frozen before any metric was computed
+  primary_series: "regime_minvar net @10bps vs rolling_lw_minvar net @10bps"
+  sensitivity_series: "net @0/5/20bps"
+  cagr: "(V_T/V_0)^(365.25/D) - 1, D = elapsed calendar days, entry cost included"
+  ann_volatility: "std(r_t) * sqrt(252)"
+  risk_free: "r_f,t = (DFF_{t-1}/100) * (calendar_days(t-1,t)/360); zero on the entry row"
+  sharpe: "mean(r - r_f)/std(r - r_f) * sqrt(252)"
+  sortino: "mean(r - r_f)/sqrt(mean(min(r - r_f, 0)^2)) * sqrt(252)"
+  drawdown: "V_t / cummax(V_s<=t) - 1, from the NET wealth path"
+  calmar: "CAGR / |max drawdown|"
+  var_es: "historical daily 95% and 99%; losses reported as POSITIVE numbers"
+  significance_claims: forbidden_until_phase_11
+
+inference:
+  bootstrap: stationary_politis_romano
+  bootstrap_replications: 10000
+  bootstrap_seed: 12345
+  block_length: automatic_rule
+  mean_return_se: newey_west_hac
+  multiple_testing: "single preregistered primary; SPA named if grid jointly tested"
+
+robustness_grid:
+  hmm_states: [2, 3]
+  feature_ablations: [drop_vix, drop_realized_vol]
+  covariance_estimators: [sample, ewma, ledoit_wolf]
+  neff_thresholds: [30, 60, 120]        # Amendment A1
+  degeneracy_handling: [fallback_unconditional, accept_as_estimated]  # Amendment A2
+  mixture_formulas: [within_state_only, total_covariance_with_between_state_term]  # A3
+  estimation_windows: [expanding, rolling_5y]
+  weight_caps: [0.30, 0.40, 0.50]
+  cost_bps: [0, 5, 20]
+  universes: [[SPY, IEF, GLD], [SPY, QQQ, IWM, IEF, GLD]]
+  hmm_seed_block_alt: 100                # alternative seeds 100..115
+  subperiods:
+    pre_2020: ["2010-01-01", "2019-12-31"]
+    covid: ["2020-02-01", "2020-12-31"]
+    tightening_2022: ["2022-01-01", "2023-10-31"]
+    post_2020: ["2020-01-01", "2026-08-06"]
+  subperiod_status: descriptive_only
+
+seeds:
+  global: 42
+  hmm_inits: "42..57"
+  bootstrap: 12345
+
+# -----------------------------------------------------------------------------
+# Amendments (frozen values above are never edited silently; the tagged
+# original v0.2.0-preregistered remains immutable in git history)
+# -----------------------------------------------------------------------------
+amendments:
+  A1:
+    date: "2026-08-15"
+    results_seen: false          # no model had been estimated at amendment time
+    reason: external review of the preregistration, before Phase 4
+    changes:
+      - "regime_covariance.responsibilities: clarified as smoothed responsibilities P(S_s=k|F_t) from the fit through t; trading signal remains the filtered endpoint probability"
+      - "robustness_grid.neff_thresholds: [30, 60, 120] added; rationale for 60 documented in docs/research_design.md §6"
+      - "cost convention restated with worked example (design doc §8); cost multiplies full trade sum, not halved turnover"
+      - "reference list verified; [VERIFY] markers replaced with DOIs"
+  A2:
+    date: "2026-08-15"
+    results_seen: false          # no covariance/portfolio result existed
+    knowledge_at_adoption: "4 affected dates, their guard flags, and their probabilities"
+    reason: "4/200 refits produced an absorbing transition row; frozen plan covered occupancy degeneracy only"
+    changes:
+      - "absorbing transition row (diag(P) >= 1 - 1e-12, threshold fixed before this amendment) is treated as a degenerate fit"
+      - "degenerate fits do not supply a regime-conditioned covariance; allocation uses unconditional Ledoit-Wolf estimated through that date"
+      - "real-time probability preserved unchanged and still reported; fallback date and reason audit-logged"
+      - "rule applies symmetrically to either state"
+      - "robustness case accept_as_estimated added to the grid"
+    excluded:
+      - replace_the_probability
+      - interpolate_from_neighboring_months
+      - delete_the_rebalance
+      - refit_until_preferred_transition_matrix
+      - change_absorbing_threshold_after_seeing_results
+    affected_dates: ["2009-12-31", "2012-03-30", "2012-04-30", "2012-05-31"]
+    dates_are_audit_only: true   # routing depends on guard flags, never on these dates
+  A3:
+    date: "2026-08-15"
+    results_seen: false          # no covariance matrix had been computed
+    reason: "frozen plan did not state whether state estimators are centered covariances or uncentered second moments"
+    changes:
+      - "state estimators defined as CENTERED covariances around their own state means"
+      - "main mixture = sum_k pbar_k C_k (within-state only); documented as assuming common conditional means"
+      - "robustness case total_covariance_mixture adds the between-state term (mu_k - mubar)(mu_k - mubar)'"
+      - "every rebalance reports the relative Frobenius norm of the omitted between-state term"
+  A4:
+    date: "2026-08-15"
+    results_seen: false          # no portfolio return had been computed
+    reason: "initial-entry and cost-accounting conventions were implicit in the frozen plan"
+    changes:
+      - "first execution starts from 100% cash: pretrade weights zero, trade sum 1, entry cost c for every strategy"
+      - "no return accrues before the first execution"
+      - "multiplicative identity 1+r_net = (1+r_gross)(1-TC); additive subtraction not used"
+      - "drift recurrence applied every trading day, not once per month"
+      - "Phase 9 accounting uses simple returns (log returns remain for estimation)"
+      - "holdings and gross returns identical across cost scenarios by construction"

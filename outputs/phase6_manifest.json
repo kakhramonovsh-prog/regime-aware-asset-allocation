@@ -1,0 +1,23 @@
+{
+  "phase": "6-regimes",
+  "created_at_utc": "2026-08-15T23:08:43+00:00",
+  "git_commit": "fcf47ed76a40672d33adcc8414b316fc9a9967a5",
+  "config_sha256": "c039cc1e54de5455e4d4daa04fc86f698a3ec8f5485b2b80bcbe19dccedbdc49",
+  "data_snapshot_manifest": "manifest_2026-08-06.json",
+  "data_snapshot_sha256": "6ce35432bae2969dc7598e150f877a3faec5a4453e9da77077b71fb3736715c2",
+  "note": "HMM regime identification only. Real-time signals are filtered probabilities from models fit through each rebalance date; ex-post smoothed probabilities are stored separately and are descriptive only. No covariance estimation, portfolio optimization, or strategy performance was computed or examined.",
+  "artifacts": {
+    "outputs/regimes/realtime_probabilities.parquet": "2bdb4642ad95754d5925d9fbf4f75e9f52b5ca4e8506676e2a9e702b3961e363",
+    "outputs/regimes/all_initializations.csv": "ccd3eba743ce7a609e940e54f75da88841ab667d95b04459b7aa5c5596737b15",
+    "outputs/regimes/selected_fit_diagnostics.csv": "4875e8c9d98bf179dee2d8a5a12a7602b0d18f3cbf31f36e64f2f208ac92f20e",
+    "outputs/regimes/model_revision_stability.csv": "1a5fe54915cdaa48d73743d5f985adf2b58009454669e2b9183c09dc5064c385",
+    "outputs/regimes/implementation_parameters.csv": "8faade61b731d218b15ec3d7d2d4de937472182ab8be8598dfadf5cfcd3ea974",
+    "outputs/regimes/transition_matrices.parquet": "9877c6d60cce5bd7910d006165d5bcaafe8bab296ca93a1bd20165bb20840f77",
+    "outputs/regimes/state_characteristics.csv": "d0b7139afe70ba9f2889ac4d669c7035f15d1261bf62f36b473bdf70aea60e34",
+    "outputs/regimes/stability_diagnostics.csv": "7f5006a4b6bfaa0bcc23a45d552f90ad3bbeb5db6bf1f4e017d961b05161a1a7",
+    "outputs/regimes/distinctiveness_diagnostic.csv": "3c88d554228d48fad452b1450cc208c2c9cd185832a7db36b89dc02079ff14aa",
+    "outputs/regimes/feature_ablations.csv": "87ff59ff7209b1a75e6fd5c02b222a2e38b43e04d663758740493ca7dc524cec",
+    "outputs/regimes/expost_smoothed_probabilities.parquet": "9cb09324c84797db1c61cc1eac99b6d5314982704ba66340bdc3ca7217b04ece",
+    "outputs/figures/regime_probabilities.png": "c657eec82324867fbb84edd45e8265889e2684adb02c6c9bbd1ef6d09df826e0"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "phase": "9-accounting",
+  "created_at_utc": "2026-08-15T23:55:14+00:00",
+  "git_commit": "2e96b4022adfb1ac96bc07a3d1155f20e9d41ff3",
+  "config_sha256": "51acdcb139b91bb19881d3d76d8488283489886a74950fe588db147f352e81a9",
+  "data_snapshot_manifest": "manifest_2026-08-06.json",
+  "data_snapshot_sha256": "6ce35432bae2969dc7598e150f877a3faec5a4453e9da77077b71fb3736715c2",
+  "note": "Portfolio accounting only: drifted holdings, trades, turnover, costs, gross and net returns. No Sharpe ratio, drawdown, cumulative-return ranking, or strategy selection was computed or examined.",
+  "artifacts": {
+    "outputs/backtests/pretrade_weights.parquet": "b1f94e66bfabcc14658d05f5edf48e638dabd4de1643cb0f0618153d8bdc2319",
+    "outputs/backtests/posttrade_weights.parquet": "71564f2d648f221d716a37c3a77db2eb11685f46cb2d95f7dd6982fd987350f1",
+    "outputs/backtests/trades.parquet": "e6b39a3f03195f317bdede45f2bcf39677912ae743460120a145598c4695c927",
+    "outputs/backtests/turnover.parquet": "b3b1ba82065f042afe4fc92cd42beb417322ac124e96ee1168271ebd4975cd7c",
+    "outputs/backtests/gross_returns.parquet": "04e3f5df9760b8f235c804a4b428a30a2a60f209337198c497de77b32440feaf",
+    "outputs/backtests/accounting_audit.parquet": "efcb9c4d1c0299f77688ce723ac67452a8727cd5bcdcf2e7f0762abbc72010db",
+    "outputs/backtests/transaction_costs.parquet": "f83ac89fddd3edcfe935a3de6881e4b8c71fe0c5260cd94687ed7370f6ced774",
+    "outputs/backtests/net_returns_0bps.parquet": "b00dfd6346d0905a237dbfeed81757619d9b22d37524194884c18ef9ff3dd642",
+    "outputs/backtests/net_returns_5bps.parquet": "530b810d213ac936e57ecab14432438ae6b8d55c6022c7f303a9cd8d69408646",
+    "outputs/backtests/net_returns_10bps.parquet": "ed4ec0a571b71e8ace8256a35110e07b33ee6d3f242a19af8a1660dbb0a1ee63",
+    "outputs/backtests/net_returns_20bps.parquet": "81952f4b3d45aacd5aa9d92bc98947662d159efdec5e22de95a603051f95226a"
+  }
+}

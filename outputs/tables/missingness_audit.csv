@@ -1,0 +1,11 @@
+series,kind,n_raw,n_missing_raw,n_aligned,n_missing_aligned,n_leading_nan_aligned
+SPY,price,5462,0,5462,0,
+QQQ,price,5462,0,5462,0,
+IWM,price,5462,0,5462,0,
+IEF,price,5462,0,5462,0,
+GLD,price,5462,0,5462,0,
+VIXCLS,macro,5665,172,5462,0,0
+DGS2,macro,5665,233,5462,0,0
+DGS10,macro,5665,233,5462,0,0
+T10Y2Y,macro,5666,233,5462,0,0
+DFF,macro,7931,0,5462,0,0

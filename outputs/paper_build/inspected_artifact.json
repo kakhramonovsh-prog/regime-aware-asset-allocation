@@ -1,0 +1,64 @@
+{
+  "round": 6,
+  "status": "PASSED - no defects; reproducible release artifact",
+  "pdf_sha256": "3dc678f40de5a7c2fc64f79191fd5488770dc8bed2e9fe7ea31d270106d4ae58",
+  "page_count": 15,
+  "bytes": 346347,
+  "ci_run_id": "31995859922",
+  "commit_built": "91c6807",
+  "commit_at_inspection": "91c68071c98607785dcffd98d60d58f3dc21d4ca",
+  "inspection_date": "2026-08-17",
+  "reproducibility": {
+    "title_date": "frozen via config.yaml manuscript.release_date -> \releaseDate macro",
+    "source_date_epoch": 1786924800,
+    "source_date_epoch_utc": "2026-08-17T00:00:00+00:00",
+    "force_source_date": 1,
+    "independent_rebuild": "run 31995859922 rerun on a fresh runner produced a byte-identical PDF",
+    "verified_byte_identical": true
+  },
+  "build_environment": {
+    "engine": "pdfTeX 3.141592653-2.6-1.40.26",
+    "distribution": "TeX Live 2024",
+    "python": "3.12",
+    "runner": "GitHub Actions ubuntu-latest"
+  },
+  "citations": {
+    "cited": 22,
+    "verified": 22,
+    "pending": 0
+  },
+  "tests_passing": 268,
+  "note": "Release artifact for v0.13.1. Text of all 15 pages is identical to the v0.13.0-manuscript artifact; only the previously wall-clock PDF metadata changed, which is why the hash differs.",
+  "history": [
+    {
+      "round": 1,
+      "run": "31975553015",
+      "pdf_sha256": "3b653741427bd63f84d345e09957bb7e07b840c230ee1ffcd60e94b1c85ef516",
+      "result": "FAILED - 7 defects"
+    },
+    {
+      "round": 2,
+      "run": "31978675959",
+      "pdf_sha256": "7019d029da61acebab724c290ca7a1297500fe174afab7746f80cab5e3c5be0a",
+      "result": "FAILED - 7 defects"
+    },
+    {
+      "round": 3,
+      "run": "31979149256",
+      "pdf_sha256": "5c7795e458c578ecd993a4507f56421b97ac6d2e4814f8e6cbb086e744853156",
+      "result": "PASSED with 1 wording residual"
+    },
+    {
+      "round": 4,
+      "run": "31979428122",
+      "pdf_sha256": "3e7e5c4e54956dbd7dcd2f8186a24b04ba7696497f594e5f9240c8d79b2d73fa",
+      "result": "PASSED - no defects"
+    },
+    {
+      "round": 5,
+      "run": "31992993874",
+      "pdf_sha256": "73dac58e8537d34ea88ebe995ce49b44b9601962daded6d020574f8f62cf9639",
+      "result": "PASSED - no defects; release artifact"
+    }
+  ]
+}

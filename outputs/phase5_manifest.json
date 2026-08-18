@@ -1,0 +1,16 @@
+{
+  "phase": "5-volatility",
+  "created_at_utc": "2026-08-15T21:53:48+00:00",
+  "git_commit": "82f91ab37f31aa28a6d2b033c8cbdaeb59505659",
+  "config_sha256": "54ccd33d322e7924c9cf9f3d480c0cdf20907b31594e14ace786e9b9bc855d6c",
+  "data_snapshot_manifest": "manifest_2026-08-06.json",
+  "data_snapshot_sha256": "6ce35432bae2969dc7598e150f877a3faec5a4453e9da77077b71fb3736715c2",
+  "note": "Volatility forecasting only, estimated through each rebalance date. No portfolio returns, regime model, or strategy selection was computed or examined. EWMA remains the portfolio-feeding model regardless of this comparison (fixed ex ante).",
+  "artifacts": {
+    "outputs/forecasts/volatility_forecasts.parquet": "6f0771769cfe55f41349864951545e9cc6667d938d671a50bcc01b33775ed610",
+    "outputs/tables/volatility_loss_by_asset.csv": "0980da949710d85aa4648cf553d905effecd6ef919c0e537915f852411a0ea8b",
+    "outputs/tables/forecast_comparisons.csv": "7bdf8c0a355c99f204c276a5a1c52e90f6756ad1d14428d6f36416ef0f3a56cd",
+    "outputs/tables/volatility_estimation_log.csv": "630ff07c20b11a05a4d93d7dd22f6d150ea8b532454cc1f9f2c2aa04afb5da59",
+    "outputs/figures/forecasts_vs_realized_spy.png": "a6bdb11a80b53172a43dd8174bbb989c036187bb4a903e112d20e0f775c746a1"
+  }
+}

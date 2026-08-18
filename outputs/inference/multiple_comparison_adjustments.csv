@@ -1,0 +1,8 @@
+comparison,cost_bps,observed_difference,ci95_lower,ci95_upper,p_one_sided_centered_null,p_holm,role,note
+ewma_scaled_minvar minus rolling_lw_minvar,10,0.036237133237870256,-0.11173210618183312,0.18574438139694066,0.3121,1.0,secondary / robustness,not confirmatory; the preregistered primary is unaffected
+static_minvar minus rolling_lw_minvar,10,0.001505451074680808,-0.05795064077800429,0.06217224293867756,0.4779,1.0,secondary / robustness,not confirmatory; the preregistered primary is unaffected
+equal_weight minus rolling_lw_minvar,10,-0.051687747721859245,-0.3117045026869356,0.21917642975838053,0.6496,1.0,secondary / robustness,not confirmatory; the preregistered primary is unaffected
+static_6040 minus rolling_lw_minvar,10,-0.055890259274327336,-0.3821308871543865,0.28851245417379995,0.6234,1.0,secondary / robustness,not confirmatory; the preregistered primary is unaffected
+regime_minvar minus rolling_lw_minvar,0,0.030629487827657398,-0.0644417531301023,0.12376143446310812,0.2566,1.0,secondary / robustness,not confirmatory; the preregistered primary is unaffected
+regime_minvar minus rolling_lw_minvar,5,0.02580454137162147,-0.06938761180857084,0.11880562907294002,0.2887,1.0,secondary / robustness,not confirmatory; the preregistered primary is unaffected
+regime_minvar minus rolling_lw_minvar,20,0.011246551124485693,-0.0850828348992728,0.10572115497771983,0.4068,1.0,secondary / robustness,not confirmatory; the preregistered primary is unaffected

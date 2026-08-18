@@ -1,0 +1,10 @@
+# Conda environment (alternative to the pip/venv route in README).
+# Python is pinned to 3.12: hmmlearn does not yet ship wheels for 3.14.
+name: regime-allocation
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - pip:
+      - -r requirements.txt

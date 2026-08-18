@@ -1,0 +1,4 @@
+statistic,value
+"corr(VIX_level, RV21_level)",0.872613
+"corr(dVIX_21d, dRV21_21d)",0.615443
+"corr(VIX_t, RV21_next21d)",0.706885

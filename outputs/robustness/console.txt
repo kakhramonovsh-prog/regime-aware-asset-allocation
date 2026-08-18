@@ -1,0 +1,137 @@
+Snapshot verified against manifest_2026-08-06.json.
+START 13 specifications, 10000 bootstrap replications
+[1/13] primary  (factor: -) ...
+Model is not converging.  Current: -3388.4054364200188 is not greater than -3388.405392197411. Delta is -4.422260781211662e-05
+Model is not converging.  Current: -3892.2672574214425 is not greater than -3892.267257180137. Delta is -2.413053152849898e-07
+Model is not converging.  Current: -4052.3594100371774 is not greater than -4052.35939626216. Delta is -1.3775017578154802e-05
+Model is not converging.  Current: -4341.1122719387895 is not greater than -4341.1122578915765. Delta is -1.4047212971490808e-05
+Model is not converging.  Current: -4437.964485026767 is not greater than -4437.964451028815. Delta is -3.3997951504716184e-05
+Model is not converging.  Current: -4553.4661866057895 is not greater than -4553.466175204691. Delta is -1.140109816333279e-05
+Model is not converging.  Current: -4810.005689605413 is not greater than -4810.005689182986. Delta is -4.2242663766955957e-07
+Model is not converging.  Current: -4927.262471843787 is not greater than -4927.262470269837. Delta is -1.5739506125100888e-06
+[1/13] primary: dSharpe +0.0210  CI [-0.0748, +0.1147]  contains zero: True  (360.1s)
+[2/13] hmm_3_states  (factor: HMM states) ...
+Model is not converging.  Current: -2952.555234501205 is not greater than -2952.55523307386. Delta is -1.4273450688051526e-06
+Model is not converging.  Current: -3610.5175427375398 is not greater than -3610.517538502479. Delta is -4.235060714563588e-06
+Model is not converging.  Current: -3610.5175427584823 is not greater than -3610.517538572599. Delta is -4.185883426544024e-06
+Model is not converging.  Current: -3610.517542449585 is not greater than -3610.5175379384045. Delta is -4.511180577537743e-06
+Model is not converging.  Current: -3610.517542868114 is not greater than -3610.517539002726. Delta is -3.865387952828314e-06
+Model is not converging.  Current: -3610.5175428299654 is not greater than -3610.517538841331. Delta is -3.9886344893602654e-06
+Model is not converging.  Current: -3670.212486049946 is not greater than -3670.212483870001. Delta is -2.1799451133119874e-06
+Model is not converging.  Current: -3670.2124867350462 is not greater than -3670.212482196414. Delta is -4.5386323108687066e-06
+Model is not converging.  Current: -3670.2124872092922 is not greater than -3670.212482769701. Delta is -4.43959106632974e-06
+Model is not converging.  Current: -4453.125626436042 is not greater than -4453.125613637754. Delta is -1.2798287571058609e-05
+Model is not converging.  Current: -3754.941232151582 is not greater than -3754.941230925101. Delta is -1.226480890181847e-06
+Model is not converging.  Current: -3754.941233298505 is not greater than -3754.9412287600476. Delta is -4.538457233138615e-06
+Model is not converging.  Current: -3754.9412322481962 is not greater than -3754.9412305256774. Delta is -1.722518845781451e-06
+Model is not converging.  Current: -4553.836024420542 is not greater than -4553.836022300115. Delta is -2.120427780027967e-06
+Model is not converging.  Current: -7240.529658916806 is not greater than -7240.529658697802. Delta is -2.190035957028158e-07
+[2/13] hmm_3_states: dSharpe -0.0284  CI [-0.1070, +0.0484]  contains zero: True  (616.1s)
+[3/13] drop_vix  (factor: feature set) ...
+Model is not converging.  Current: -3605.0658278527876 is not greater than -3605.0658266616074. Delta is -1.1911802175745834e-06
+Model is not converging.  Current: -3687.915176348983 is not greater than -3687.9151729057958. Delta is -3.443187324592145e-06
+Model is not converging.  Current: -9367.51629068209 is not greater than -9367.516289609308. Delta is -1.0727817425504327e-06
+Model is not converging.  Current: -9580.816704054918 is not greater than -9580.816699386367. Delta is -4.668550900532864e-06
+[3/13] drop_vix: dSharpe +0.0467  CI [-0.0459, +0.1378]  contains zero: True  (295.6s)
+[4/13] drop_realized_vol  (factor: feature set) ...
+Model is not converging.  Current: -3521.6134942532944 is not greater than -3521.6134886343384. Delta is -5.618956038233591e-06
+Model is not converging.  Current: -3583.277374117394 is not greater than -3583.277368661091. Delta is -5.456303370010573e-06
+Model is not converging.  Current: -3554.395627929023 is not greater than -3554.3956275453365. Delta is -3.836862561001908e-07
+Model is not converging.  Current: -3685.729927849632 is not greater than -3685.7299277754023. Delta is -7.42297743272502e-08
+Model is not converging.  Current: -3685.7299277299135 is not greater than -3685.729927325653. Delta is -4.042603904963471e-07
+Model is not converging.  Current: -3767.956241174701 is not greater than -3767.956236919728. Delta is -4.254973191564204e-06
+Model is not converging.  Current: -3834.3568918952205 is not greater than -3834.356886838753. Delta is -5.056467671238352e-06
+Model is not converging.  Current: -3916.844088824703 is not greater than -3916.8440854796454. Delta is -3.345057393744355e-06
+Model is not converging.  Current: -3926.5229641566348 is not greater than -3926.5229567863726. Delta is -7.370262210315559e-06
+Model is not converging.  Current: -3909.6382250997544 is not greater than -3909.638225059671. Delta is -4.008325049653649e-08
+Model is not converging.  Current: -3909.638225241615 is not greater than -3909.638224781615. Delta is -4.6000013753655367e-07
+Model is not converging.  Current: -4111.963579522754 is not greater than -4111.963578676964. Delta is -8.457900548819453e-07
+Model is not converging.  Current: -4105.941030303112 is not greater than -4105.940981906349. Delta is -4.839676239498658e-05
+Model is not converging.  Current: -4111.963579815577 is not greater than -4111.96357731576. Delta is -2.4998171284096316e-06
+Model is not converging.  Current: -4076.9962026951816 is not greater than -4076.996202235571. Delta is -4.5961041905684397e-07
+Model is not converging.  Current: -4186.20574620887 is not greater than -4186.205729875785. Delta is -1.6333084204234183e-05
+Model is not converging.  Current: -4151.230909408143 is not greater than -4151.230909203093. Delta is -2.0505012798821554e-07
+Model is not converging.  Current: -4151.230909389207 is not greater than -4151.230909361468. Delta is -2.773958840407431e-08
+Model is not converging.  Current: -4151.230909388369 is not greater than -4151.230909371495. Delta is -1.6873855201993138e-08
+Model is not converging.  Current: -4229.77305466412 is not greater than -4229.773054412869. Delta is -2.5125063984887674e-07
+Model is not converging.  Current: -4229.77305465735 is not greater than -4229.773054464868. Delta is -1.9248182070441544e-07
+Model is not converging.  Current: -4229.773054658865 is not greater than -4229.77305445277. Delta is -2.0609422790585086e-07
+Model is not converging.  Current: -4229.773054674822 is not greater than -4229.773054347998. Delta is -3.2682328310329467e-07
+Model is not converging.  Current: -4229.773054642026 is not greater than -4229.773054590714. Delta is -5.1311872084625065e-08
+Model is not converging.  Current: -4441.9767737487355 is not greater than -4441.976767891837. Delta is -5.856898496858776e-06
+Model is not converging.  Current: -4349.0479108979525 is not greater than -4349.047909834883. Delta is -1.0630692486301996e-06
+Model is not converging.  Current: -4524.600045834165 is not greater than -4524.600040821881. Delta is -5.012284418626223e-06
+Model is not converging.  Current: -4600.680769384216 is not greater than -4600.680766864088. Delta is -2.5201279640896246e-06
+Model is not converging.  Current: -4663.20753266333 is not greater than -4663.207525600398. Delta is -7.0629321271553636e-06
+Model is not converging.  Current: -4731.392750970505 is not greater than -4731.392734783213. Delta is -1.6187292203539982e-05
+Model is not converging.  Current: -4556.791240224689 is not greater than -4556.791239244979. Delta is -9.797104212339036e-07
+Model is not converging.  Current: -4799.26182595055 is not greater than -4799.261807169424. Delta is -1.8781125618261285e-05
+Model is not converging.  Current: -4868.174485234305 is not greater than -4868.174465930384. Delta is -1.93039213627344e-05
+Model is not converging.  Current: -4944.291079808731 is not greater than -4944.291061534976. Delta is -1.827375581342494e-05
+Model is not converging.  Current: -5022.644441550963 is not greater than -5022.644424849023. Delta is -1.6701939784979913e-05
+Model is not converging.  Current: -5104.268186809486 is not greater than -5104.268171727693. Delta is -1.5081793208082672e-05
+Model is not converging.  Current: -5196.705394546425 is not greater than -5196.705380488176. Delta is -1.405824878020212e-05
+Model is not converging.  Current: -5277.4360560428295 is not greater than -5277.436042810956. Delta is -1.3231873708718922e-05
+Model is not converging.  Current: -5365.903821584101 is not greater than -5365.903808580922. Delta is -1.3003179446968716e-05
+Model is not converging.  Current: -5340.005903290022 is not greater than -5340.005899154223. Delta is -4.135798917559441e-06
+Model is not converging.  Current: -5340.0059023817175 is not greater than -5340.0059010823325. Delta is -1.299385075981263e-06
+Model is not converging.  Current: -5452.7555314224055 is not greater than -5452.755519536679. Delta is -1.1885726962646004e-05
+Model is not converging.  Current: -5546.290194940149 is not greater than -5546.29018530063. Delta is -9.639519703341648e-06
+Model is not converging.  Current: -5649.626517550002 is not greater than -5649.626513090401. Delta is -4.459600859263446e-06
+Model is not converging.  Current: -5593.399671517152 is not greater than -5593.399669495034. Delta is -2.022117769229226e-06
+Model is not converging.  Current: -5756.664023216352 is not greater than -5756.664020742027. Delta is -2.474324901413638e-06
+Model is not converging.  Current: -6017.684146183032 is not greater than -6017.684144634692. Delta is -1.548340151202865e-06
+Model is not converging.  Current: -6116.682352254044 is not greater than -6116.682351958741. Delta is -2.9530383471865207e-07
+Model is not converging.  Current: -6218.040369390476 is not greater than -6218.0403654734855. Delta is -3.9169908632175066e-06
+Model is not converging.  Current: -6313.844114168218 is not greater than -6313.844110102966. Delta is -4.0652521420270205e-06
+Model is not converging.  Current: -6414.3795196707415 is not greater than -6414.379515563927. Delta is -4.10681423090864e-06
+Model is not converging.  Current: -6509.300366804639 is not greater than -6509.3003643637785. Delta is -2.440860953356605e-06
+Model is not converging.  Current: -6731.302700103975 is not greater than -6731.302698922309. Delta is -1.1816664482466877e-06
+Model is not converging.  Current: -7135.198008834402 is not greater than -7135.198008121044. Delta is -7.133576218620874e-07
+Model is not converging.  Current: -7201.332824402533 is not greater than -7201.332822776582. Delta is -1.625950972083956e-06
+Model is not converging.  Current: -7280.538584823513 is not greater than -7280.538583292363. Delta is -1.5311497918446548e-06
+Model is not converging.  Current: -7405.229952562201 is not greater than -7405.22995168152. Delta is -8.806810001260601e-07
+Model is not converging.  Current: -7492.4170787813255 is not greater than -7492.417066711061. Delta is -1.2070264347130433e-05
+Model is not converging.  Current: -7581.19808972672 is not greater than -7581.198083390556. Delta is -6.336164005915634e-06
+Model is not converging.  Current: -7685.4011029962285 is not greater than -7685.40110271634. Delta is -2.798888090183027e-07
+[4/13] drop_realized_vol: dSharpe -0.0235  CI [-0.1078, +0.0592]  contains zero: True  (367.6s)
+[5/13] rolling_5y_window  (factor: estimation window) ...
+[5/13] rolling_5y_window: dSharpe +0.0224  CI [-0.0625, +0.1082]  contains zero: True  (2.1s)
+[6/13] cap_30pct  (factor: weight cap) ...
+[6/13] cap_30pct: dSharpe +0.0504  CI [+0.0086, +0.0932]  contains zero: False  (2.0s)
+[7/13] cap_50pct  (factor: weight cap) ...
+[7/13] cap_50pct: dSharpe +0.0169  CI [-0.0750, +0.1076]  contains zero: True  (2.1s)
+[8/13] neff_kappa_30  (factor: shrinkage threshold) ...
+[8/13] neff_kappa_30: dSharpe +0.0221  CI [-0.0749, +0.1174]  contains zero: True  (2.1s)
+[9/13] neff_kappa_120  (factor: shrinkage threshold) ...
+[9/13] neff_kappa_120: dSharpe +0.0191  CI [-0.0738, +0.1098]  contains zero: True  (2.1s)
+[10/13] core_universe  (factor: universe) ...
+Model is not converging.  Current: -3388.405436419987 is not greater than -3388.405392197414. Delta is -4.42225727965706e-05
+Model is not converging.  Current: -3892.2672574214425 is not greater than -3892.2672571800713. Delta is -2.413712536508683e-07
+Model is not converging.  Current: -4052.3594100371893 is not greater than -4052.359396262151. Delta is -1.3775038041785592e-05
+Model is not converging.  Current: -4341.1122719388295 is not greater than -4341.112257891564. Delta is -1.404726572218351e-05
+Model is not converging.  Current: -4437.964485026767 is not greater than -4437.964451028815. Delta is -3.3997951504716184e-05
+Model is not converging.  Current: -4553.466186605794 is not greater than -4553.466175204684. Delta is -1.1401109986763913e-05
+Model is not converging.  Current: -4810.005689605413 is not greater than -4810.005689182986. Delta is -4.2242663766955957e-07
+Model is not converging.  Current: -4927.262471843787 is not greater than -4927.262470269837. Delta is -1.5739506125100888e-06
+[10/13] core_universe: dSharpe +0.0160  CI [-0.0682, +0.1000]  contains zero: True  (360.2s)
+[11/13] alt_seeds_100  (factor: HMM seeds) ...
+Model is not converging.  Current: -3388.732629830648 is not greater than -3388.732624752744. Delta is -5.077904006611789e-06
+Model is not converging.  Current: -3403.107608582889 is not greater than -3403.1076085230843. Delta is -5.980473360978067e-08
+Model is not converging.  Current: -4652.5385432594885 is not greater than -4652.538540792559. Delta is -2.4669297999935225e-06
+Model is not converging.  Current: -4732.140192954815 is not greater than -4732.140189875957. Delta is -3.0788578442297876e-06
+Model is not converging.  Current: -4810.005690334786 is not greater than -4810.005687023444. Delta is -3.3113419704022817e-06
+Model is not converging.  Current: -4810.005690367654 is not greater than -4810.005686995178. Delta is -3.3724763852660544e-06
+Model is not converging.  Current: -4846.212657344407 is not greater than -4846.212653292305. Delta is -4.052101758134086e-06
+Model is not converging.  Current: -7422.406635783218 is not greater than -7422.406634439525. Delta is -1.3436929293675348e-06
+[11/13] alt_seeds_100: dSharpe +0.0205  CI [-0.0755, +0.1144]  contains zero: True  (356.3s)
+[12/13] a2_accept_as_estimated  (factor: A2 degeneracy rule) ...
+[12/13] a2_accept_as_estimated: dSharpe +0.0181  CI [-0.0779, +0.1121]  contains zero: True  (2.1s)
+[13/13] a3_total_covariance  (factor: A3 mixture formula) ...
+[13/13] a3_total_covariance: dSharpe +0.0210  CI [-0.0747, +0.1147]  contains zero: True  (2.1s)
+
+Wrote outputs\robustness\robustness_grid.csv  (13 specifications)
+Wrote outputs\robustness\hmm_diagnostics_by_spec.csv
+Wrote outputs\robustness\subperiod_descriptive.csv  (5 subperiods)
+Wrote outputs\figures\robustness_forest.png
+Provenance manifest: outputs\phase12_manifest.json

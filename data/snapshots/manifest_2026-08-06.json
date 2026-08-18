@@ -1,0 +1,111 @@
+{
+  "created_at_utc": "2026-08-15T20:59:23+00:00",
+  "downloaded_at_utc": "2026-08-07T02:48:17+00:00",
+  "git_commit": "6ccb84203dba22fb97a226b2da49dc882d9e1922",
+  "config_sha256": "6d4aab61f68597eafa1a66ccf9473d1c2677293a7e7147afe0bbacf36f410d59",
+  "python_version": "3.12.10",
+  "package_versions": {
+    "numpy": "2.5.1",
+    "pandas": "3.0.5",
+    "scipy": "1.18.0",
+    "statsmodels": "0.14.6",
+    "arch": "8.0.0",
+    "hmmlearn": "0.3.3",
+    "scikit-learn": "1.9.0",
+    "yfinance": "1.5.2",
+    "pandas-datareader": "0.11.1",
+    "matplotlib": "3.11.1",
+    "PyYAML": "6.0.3",
+    "pytest": "9.1.1"
+  },
+  "files": {
+    "data/raw/fred_DFF.csv": {
+      "sha256": "8787250c2af54b11fb047418fbeaaf657d221acea73ca408b11c582b71104c6e",
+      "bytes": 134042,
+      "rows": 7931,
+      "first_date": "2004-11-18",
+      "last_date": "2026-08-05"
+    },
+    "data/raw/fred_DGS10.csv": {
+      "sha256": "d439333edfe89ac90bf867695d3d1d75e0cfbec8b2580a8c479f69e3614d6c9a",
+      "bytes": 94868,
+      "rows": 5665,
+      "first_date": "2004-11-18",
+      "last_date": "2026-08-05"
+    },
+    "data/raw/fred_DGS2.csv": {
+      "sha256": "47a2b972dc76407e8e97a63a026297339df408a7544b60a9441329e32952c46c",
+      "bytes": 94865,
+      "rows": 5665,
+      "first_date": "2004-11-18",
+      "last_date": "2026-08-05"
+    },
+    "data/raw/fred_T10Y2Y.csv": {
+      "sha256": "d7809d303da7a1c8aea2daf59eb2c35c5c8eef704105cd260f2d0c15c9d22cc3",
+      "bytes": 95672,
+      "rows": 5666,
+      "first_date": "2004-11-18",
+      "last_date": "2026-08-06"
+    },
+    "data/raw/fred_VIXCLS.csv": {
+      "sha256": "fd949fad0aa46711e04c8c9087f71062904a8cd1604d727616e43c4a7d34ee91",
+      "bytes": 100523,
+      "rows": 5665,
+      "first_date": "2004-11-18",
+      "last_date": "2026-08-05"
+    },
+    "data/raw/prices_GLD.csv": {
+      "sha256": "adc1bee2b771f3fa8fcdcb28850de6a7fab21b053dc1337da34d8875eb8bc4c3",
+      "bytes": 601183,
+      "rows": 5462,
+      "first_date": "2004-11-18",
+      "last_date": "2026-08-06"
+    },
+    "data/raw/prices_IEF.csv": {
+      "sha256": "3207ab57a50ce27595dd603a6cd5430c83132043d0d0bf99440c3ecdc27f4943",
+      "bytes": 593769,
+      "rows": 5462,
+      "first_date": "2004-11-18",
+      "last_date": "2026-08-06"
+    },
+    "data/raw/prices_IWM.csv": {
+      "sha256": "d13d54a4bf4ed95d959f975eda82601403a49e513fed35b93ae8ec039e6a4a80",
+      "bytes": 603775,
+      "rows": 5462,
+      "first_date": "2004-11-18",
+      "last_date": "2026-08-06"
+    },
+    "data/raw/prices_QQQ.csv": {
+      "sha256": "78b45a8ff8bd68eab7aac661de1ed7b312cfaa0869f8efbafffe2ff769c19768",
+      "bytes": 602964,
+      "rows": 5462,
+      "first_date": "2004-11-18",
+      "last_date": "2026-08-06"
+    },
+    "data/raw/prices_SPY.csv": {
+      "sha256": "25713ef306a38649d564bc0428fefea11a6d3132e9c457943ce914b0cd20adb3",
+      "bytes": 606201,
+      "rows": 5462,
+      "first_date": "2004-11-18",
+      "last_date": "2026-08-06"
+    },
+    "data/processed/macro.csv": {
+      "sha256": "4eafc25e326e9992f2a3eb0dfcd5c99009a2ae5ad3a552873eb091949f7b9c35",
+      "bytes": 205675,
+      "rows": 5462,
+      "first_date": "2004-11-18",
+      "last_date": "2026-08-06"
+    },
+    "data/processed/prices.csv": {
+      "sha256": "26f52cd26ee8c3f4b1308ad46d63f1ea2d8ebaca4f0b73a729197145ec9b13e1",
+      "bytes": 559617,
+      "rows": 5462,
+      "first_date": "2004-11-18",
+      "last_date": "2026-08-06"
+    },
+    "data/raw/download_metadata.json": {
+      "sha256": "fc81a030837b1d9f97d6ef2f637497b9a9cce1f4aeeba584e0ff43139d713380",
+      "bytes": 2604
+    }
+  }
+}

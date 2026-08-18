@@ -1,0 +1,8 @@
+quantity,value
+origins compared,200.0
+argmax selects a different seed across runs,0.0
+tolerance rule selects a different seed across runs,0.0
+origins where the two rules disagree within one run,144.0
+origins with >1 fit inside the tolerance band,108.0
+origins with best-vs-second gap < 1e-9,193.0
+median best-vs-second gap,0.0

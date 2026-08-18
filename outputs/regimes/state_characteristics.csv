@@ -1,0 +1,3 @@
+classified_high_vol,mkt_log_return_mean,mkt_log_return_std,mkt_log_return_count,realized_vol_21d_mean,realized_vol_21d_std,realized_vol_21d_count,log_vix_lag1_mean,log_vix_lag1_std,log_vix_lag1_count,yield_slope_lag1_mean,yield_slope_lag1_std,yield_slope_lag1_count
+False,-0.000693008,0.00680133,118,0.106157,0.0333836,118,2.67468,0.164399,118,0.921356,0.813019,118
+True,-0.000177415,0.0128869,82,0.20281,0.115069,82,3.13671,0.248642,82,1.03488,1.10005,82

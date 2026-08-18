@@ -1,0 +1,2 @@
+comparison,cost_bps,estimand,observed_difference,ci95_lower,ci95_upper,interval_excludes_zero,bootstrap_mean,bootstrap_sd,p_one_sided_centered_null,n_replications,mean_block_days,seed,n_daily_observations
+regime_minvar minus rolling_lw_minvar,10,annualized Sharpe on daily excess returns (sqrt 252),0.020965518541842143,-0.07480402273503961,0.11470522431677732,False,0.020044086688092513,0.047960523883840825,0.3273,10000,21,12345,4173

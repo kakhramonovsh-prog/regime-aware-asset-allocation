@@ -1,0 +1,7 @@
+label,metric,raw_value,display_value,display_unit,formatted
+sharpe,sharpe_difference,0.0209655185418421,0.0209655185418421,,0.021
+sortino,sharpe_difference,0.0378849512694083,0.0378849512694083,,0.038
+ann_volatility,vol_difference,-0.0017544903048056,-0.17544903048056001,pp,-0.175
+cagr,cagr_difference,0.0001834197489547,0.01834197489547,pp,0.018
+max_drawdown,maxdd_difference,-0.0002955759305843,-0.02955759305843,pp,-0.030
+calmar,sharpe_difference,0.0002034957696804,0.0002034957696804,,0.000
