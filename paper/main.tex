@@ -9,6 +9,10 @@
 \usepackage{graphicx}
 \usepackage{natbib}
 \usepackage{caption}
+% Must precede hyperref. Without hyphen breaking the repository URL in
+% the availability declaration cannot wrap and runs 18.7pt into the
+% margin, which the build gate rejects.
+\usepackage[hyphens]{url}
 \usepackage[hidelinks]{hyperref}
 \usepackage{setspace}
 
@@ -18,11 +22,15 @@
 
 \input{macros.tex}
 
-\title{Do Latent Volatility Regimes Improve Risk-Based Asset
+\title{Does Regime Conditioning Improve Volatility-Aware Asset
 Allocation?\\[0.3em]
-\large Evidence from a Preregistered Walk-Forward ETF Study}
-\author{Shakhrukh Kakhramonov\thanks{Baruch College, Zicklin School of
-Business. Code, preregistration and complete output:
+\large A Prospectively Specified Walk-Forward Evaluation}
+\author{Shakhrukh Kakhramonov\thanks{%
+Zicklin School of Business, Baruch College, City University of New York,
+New York, NY, USA.
+ORCID: \orcidID{}.
+Corresponding author: \correspondingEmail{}.
+Code, analysis plan and complete output:
 \url{https://github.com/kakhramonovsh-prog/regime-aware-asset-allocation}.
 I thank the reviewers who read successive drafts of the design and
 forced several corrections recorded in the amendment log.}}
@@ -51,16 +59,16 @@ difference is \hacAnnualReturnDiff{}. Regime conditioning lowered
 annualized volatility by \volDifferenceMagnitude{}, but required
 \turnoverRatio{} times the turnover, and the estimate falls from
 \diffAtZeroBps{} to \diffAtTwentyBps{} as costs rise from
-zero to 20 basis points. Across thirteen preregistered robustness
+zero to 20 basis points. Across thirteen prespecified robustness
 specifications the sign reverses twice and no comparison survives
 multiplicity adjustment; portfolio constraints affected apparent
 performance more than any modelling choice examined. The hypothesis,
-sample split and robustness grid were registered before estimation.
+sample split and robustness grid were fixed before estimation.
 \end{abstract}
 
 \vspace{0.5em}
 \noindent\textbf{Keywords:} regime switching, hidden Markov models,
-minimum-variance portfolios, out-of-sample evaluation, preregistration,
+minimum-variance portfolios, out-of-sample evaluation, prospective specification,
 transaction costs
 
 \vspace{0.3em}
@@ -114,14 +122,20 @@ data. A reader can audit every computation without receiving a byte of
 licensed data.
 
 % =====================================================================
-\section{Preregistered empirical design}
+\section{Prospectively specified empirical design}
 \label{sec:design}
 
 The hypothesis, comparator, sample split, cost convention and complete
-robustness grid were published and version-tagged before any model was
+robustness grid were fixed and version-tagged before any model was
 estimated. Four amendments followed, each dated and each recording what
 was known when it was made; three were adopted before any portfolio
 return existed.
+
+The analysis plan was time-stamped in a private version-controlled
+repository before model estimation rather than lodged with a public
+registry, so this study is described as prospectively specified rather
+than preregistered. The original development history is preserved and
+can be provided confidentially to editors or reviewers.
 
 \paragraph{Hypothesis.} The primary null is
 \begin{equation}
@@ -314,7 +328,7 @@ Two features of the robustness evidence deserve weight in any reading of
 the point estimate. The sign reverses under a three-state specification
 and when realized volatility is dropped from the feature set, and it
 reverses again between the pre- and post-2020 halves of the sample. A
-result that changes direction under preregistered variations of this
+result that changes direction under prespecified variations of this
 kind is fragile regardless of its interval.
 
 One observation the design did not set out to test deserves attention,
@@ -344,6 +358,38 @@ higher-frequency rebalancing, or lower trading costs remains open. This
 study establishes only that in a five-asset ETF universe rebalanced
 monthly at realistic costs, over \oosYears{} years, the improvement was
 too small to distinguish from zero.
+
+% =====================================================================
+% DECLARATIONS — required by Springer Nature and most finance journals
+% =====================================================================
+\section*{Declarations}
+\addcontentsline{toc}{section}{Declarations}
+
+\paragraph{Funding.} This research received no external funding.
+
+\paragraph{Competing interests.} The author declares no competing
+interests.
+
+\paragraph{Data and code availability.} Replication code, configuration
+files, frozen output hashes, tests, and the reproducible manuscript
+build are available at
+\url{https://github.com/kakhramonovsh-prog/regime-aware-asset-allocation}.
+Market and macroeconomic data were obtained from Yahoo Finance and the
+Federal Reserve Economic Data service. Raw vendor files are not
+redistributed. Download scripts, metadata, and snapshot hashes are
+provided to support reconstruction, subject to provider availability and
+applicable terms.
+
+\paragraph{Author contributions.} Shakhrukh Kakhramonov:
+Conceptualization, methodology, software, validation, formal analysis,
+investigation, data curation, visualization, writing---original draft,
+writing---review and editing, and project administration.
+
+\paragraph{Declaration of AI-assisted tools.} During the preparation of
+this work, the author used Anthropic Claude and OpenAI ChatGPT for
+technical and manuscript assistance. The author reviewed and revised all
+AI-assisted outputs, made all final decisions, and takes full
+responsibility for the work.
 
 \bibliography{references}
 \end{document}

@@ -18,6 +18,13 @@ manuscript:
   # Bump this deliberately when cutting a new manuscript release.
   release_date: "2026-08-17"
 
+  # Author identifiers required on a submitted preprint. These stay
+  # "PENDING" until registered; scripts/check_preprint.py refuses to
+  # certify the manuscript for upload while either is unset, so a
+  # placeholder cannot reach SSRN or a journal portal by accident.
+  orcid: "PENDING"
+  corresponding_email: "shakhrukh.kakhramonov87@stu-mail.baruch.cuny.edu"
+
 data:
   # GLD (the youngest asset in the universe) began trading 2004-11-18.
   # Raw downloads start at inception; the aligned analysis sample effectively

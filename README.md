@@ -1,7 +1,11 @@
-# Regime-Aware Volatility Forecasting and Dynamic Asset Allocation
+# Does Regime Conditioning Improve Volatility-Aware Asset Allocation?
 
-**Do latent volatility regimes improve risk-based asset allocation?**
-Evidence from a preregistered walk-forward ETF study, 2010–2026.
+**A prospectively specified walk-forward evaluation**, 2010–2026.
+
+> The analysis plan was time-stamped in a version-controlled repository
+> before model estimation rather than lodged with a public registry, so
+> the study is described as *prospectively specified* rather than
+> *preregistered*.
 
 [![paper](https://img.shields.io/badge/paper-15%20pages-blue)](outputs/paper_build/inspected/main.pdf)
 [![release](https://img.shields.io/badge/release-v0.13.1-informational)](../../releases/tag/v0.13.1)
@@ -62,7 +66,7 @@ that a win would have been hard to manufacture:
 
 | Control | What it prevents |
 |---|---|
-| **Preregistration**, git-tagged before any model ran | Choosing the hypothesis after seeing results |
+| **Prospective specification**, git-tagged before any model ran | Choosing the hypothesis after seeing results |
 | **Matched comparator** differing only by the regime signal | Attributing optimization's gains to regimes |
 | **Filtered** state probabilities, never smoothed | Trading on information the investor lacked |
 | **Truncation tests** | Look-ahead leaking through feature construction |

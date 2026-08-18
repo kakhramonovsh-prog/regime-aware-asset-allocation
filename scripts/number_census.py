@@ -94,7 +94,7 @@ GENERATED_NAME = re.compile(r"^[a-z]+[A-Z]")
 # results, so they carry no raw value, unit or source artifact. Keep
 # this set tiny: anything that states a quantity about the data belongs
 # in the result inventory, not here.
-NON_RESULT_MACROS = {"\\releaseDate"}
+NON_RESULT_MACROS = {"\\releaseDate", "\\orcidID", "\\correspondingEmail"}
 
 
 def macros_used() -> set[str]:
