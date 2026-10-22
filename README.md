@@ -7,8 +7,8 @@
 > the study is described as *prospectively specified* rather than
 > *preregistered*.
 
-[![paper](https://img.shields.io/badge/paper-15%20pages-blue)](outputs/paper_build/inspected/main.pdf)
-[![release](https://img.shields.io/badge/release-v0.13.1-informational)](../../releases/tag/v0.13.1)
+[![paper](https://img.shields.io/badge/paper-16%20pages-blue)](outputs/paper_build/inspected/main.pdf)
+[![release](https://img.shields.io/badge/release-v0.13.2-informational)](../../releases/tag/v0.13.2)
 [![tests](https://img.shields.io/badge/tests-268%20passing-brightgreen)](tests/)
 
 ---
@@ -163,11 +163,21 @@ python scripts/run_analysis.py --phase all --allow-unfrozen
 
 ## Release
 
-`v0.13.1`. PDF SHA-256
-`3dc678f40de5a7c2fc64f79191fd5488770dc8bed2e9fe7ea31d270106d4ae58`,
-15 pages, built by GitHub Actions on TeX Live 2024. Six rounds of
+`v0.13.2`. PDF SHA-256
+`b1ffad3643f2fddf48f6768de4305e05301adeb456a719c3a1e89af38e22ba2a`,
+16 pages, built by GitHub Actions on TeX Live 2024. Seven rounds of
 page-by-page inspection are logged in
 [`outputs/paper_build/visual_inspection.md`](outputs/paper_build/visual_inspection.md).
+
+## Development history
+
+This repository starts from a clean snapshot. The development history
+behind it, 43 commits with tagged milestones from
+`v0.2.0-preregistered` (the frozen analysis plan) through `v0.13.1`, is
+public at
+[`regime-aware-asset-allocation-history`](https://github.com/kakhramonovsh-prog/regime-aware-asset-allocation-history),
+so the claim that the plan was tagged before any model ran can be
+checked against the tag dates.
 
 ## Limitations
 

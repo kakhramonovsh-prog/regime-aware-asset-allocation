@@ -373,3 +373,91 @@ even though it was unconsumed.
 as a new tag — which is why the date freeze ships as `v0.13.1` rather
 than by moving `v0.13.0-manuscript` again. `v0.13.0-manuscript` remains
 pointing at `842f4ff` and is left alone.
+
+---
+
+## Round 7 — PASSED after correction, release artifact (`v0.13.2`)
+
+Round 6 attested to `3dc678f4…ae58`. The commit after it ("Prepare
+manuscript for faculty review": declarations, corresponding email,
++56/−10 lines in `main.tex`) changed `paper/` without a new pass, so the
+PDF linked from the README no longer matched the source. This round
+re-inspects the whole manuscript rather than diffing against Round 6.
+
+Inspected by Claude (AI assistant) at the author's request; the author
+approved each wording correction before it was committed.
+
+| Field | Value |
+|---|---|
+| PDF SHA-256 | `b1ffad3643f2fddf48f6768de4305e05301adeb456a719c3a1e89af38e22ba2a` |
+| Commit | `7c3123b63385549b08a2396b1503e28202488b8b` |
+| CI run | 39719016598 |
+| Page count | 16 |
+| Bytes | 365,488 |
+| TeX | pdfTeX 3.141592653-2.6-1.40.26, TeX Live 2024 |
+| Python | 3.12 (GitHub Actions ubuntu-latest) |
+| Tests | 268 passing |
+| Citations | 22 rendered; bibliography source unchanged since Round 6 |
+| Inspection date | 2026-10-21 |
+| Automated gate | PASSED (1 overfull box, 2.6pt, under the 5pt limit) |
+| Visual result | **No defects** |
+
+### Source changes since Round 6
+
+- ORCID `0009-0008-7510-1099` replaces `PENDING` (title footnote).
+- `manuscript.release_date` 2026-08-17 → 2026-10-21; title page reads
+  "October 21, 2026"; `SOURCE_DATE_EPOCH=1792540800`.
+- The faculty-review commit's declarations, now inspected for the first
+  time.
+- Three wording corrections found in this round (below).
+
+### First build — three wording issues, corrected
+
+The first build of this round (`c0d2d54b…90f6`, run 39718452985, 16
+pages) had no layout defects, but a full read found three statements
+about where the analysis plan was recorded that disagreed with each
+other. Making the development history public made them visible.
+
+| Ref | Page | Issue | Correction |
+|---|---|---|---|
+| W1 | 2 | Plan "version-tagged … in a public repository"; it was private during the study | "in a version-controlled repository" |
+| W2 | 5 | History "can be provided confidentially to editors or reviewers"; it is now public | States the repository was private during the study and links the public history |
+| W3 | 9 | Table 2 caption "Preregistered primary comparison", contradicting p. 5's choice of "prospectively specified" | "Prospectively specified primary comparison", in the table and in the generator's caption registry |
+
+W3 escaped `check_preprint.py` because the scan covers `main.tex` and
+the section files but not `paper/tables/`.
+
+### Final build — page-by-page disposition
+
+Text was extracted from every page of both builds and diffed word by
+word. The only content changes are W1–W3; everything else is
+re-hyphenation and a reflow of about one line from page 5 onward,
+which moved Figure 1 onto the page that opens Section 8 and Table 3 to
+the foot of page 11.
+
+| Page | Elements checked | Result |
+|---|---|---|
+| 1 | Title, date, ORCID, footnote, abstract, JEL | Text identical to first build, which was inspected visually; no defect |
+| 2 | Introduction, W1 | W1 reads correctly; no defect |
+| 3–4 | Literature, data | Text identical to first build; no defect |
+| 5 | Data licensing, design, W2, equation (1) | URL breaks at its own hyphen; no defect |
+| 6–7 | Costs, equation (2), regimes, covariance, equation (3) | Reflow only; no defect |
+| 8 | Degeneracy policy, Table 1, equation (4) | No defect |
+| 9 | Inference, Table 2 (W3) | Caption corrected; some white space below the float; no defect |
+| 10 | Section 8, Figure 1 | Figure shares the page with text (better than Round 6's lone float); no defect |
+| 11 | Robustness prose, Table 3 (13 rows) | No defect |
+| 12–13 | Limitations, discussion | Reflow only; no defect |
+| 14 | Declarations, references begin | No defect |
+| 15–16 | Bibliography | 22 entries; Holm carries no DOI, as before; no defect |
+
+### Reproducibility
+
+Run 39719016598 was re-run on a fresh runner; the second PDF is
+byte-identical (`b1ffad36…ba2a` both times). The first build of this
+round was likewise re-run and matched itself (`c0d2d54b…90f6`).
+
+### Standing rule
+
+This pass attests to PDF `b1ffad36…ba2a` and nothing else. Any change to
+`paper/`, `src/` or the build scripts invalidates it and requires a new
+build, a new hash and a fresh pass.

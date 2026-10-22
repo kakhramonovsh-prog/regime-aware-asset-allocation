@@ -1,19 +1,20 @@
 {
-  "round": 6,
-  "status": "PASSED - no defects; reproducible release artifact",
-  "pdf_sha256": "3dc678f40de5a7c2fc64f79191fd5488770dc8bed2e9fe7ea31d270106d4ae58",
-  "page_count": 15,
-  "bytes": 346347,
-  "ci_run_id": "31995859922",
-  "commit_built": "91c6807",
-  "commit_at_inspection": "91c68071c98607785dcffd98d60d58f3dc21d4ca",
-  "inspection_date": "2026-08-17",
+  "round": 7,
+  "status": "PASSED - no defects after three wording corrections; reproducible release artifact",
+  "pdf_sha256": "b1ffad3643f2fddf48f6768de4305e05301adeb456a719c3a1e89af38e22ba2a",
+  "page_count": 16,
+  "bytes": 365488,
+  "ci_run_id": "39719016598",
+  "commit_built": "7c3123b",
+  "commit_at_inspection": "7c3123b63385549b08a2396b1503e28202488b8b",
+  "inspection_date": "2026-10-21",
+  "inspected_by": "Claude (AI assistant) at the author's request; wording corrections approved by the author",
   "reproducibility": {
-    "title_date": "frozen via config.yaml manuscript.release_date -> \releaseDate macro",
-    "source_date_epoch": 1786924800,
-    "source_date_epoch_utc": "2026-08-17T00:00:00+00:00",
+    "title_date": "frozen via config.yaml manuscript.release_date -> \\releaseDate macro",
+    "source_date_epoch": 1792540800,
+    "source_date_epoch_utc": "2026-10-21T00:00:00+00:00",
     "force_source_date": 1,
-    "independent_rebuild": "run 31995859922 rerun on a fresh runner produced a byte-identical PDF",
+    "independent_rebuild": "run 39719016598 rerun on a fresh runner produced a byte-identical PDF",
     "verified_byte_identical": true
   },
   "build_environment": {
@@ -28,7 +29,7 @@
     "pending": 0
   },
   "tests_passing": 268,
-  "note": "Release artifact for v0.13.1. Text of all 15 pages is identical to the v0.13.0-manuscript artifact; only the previously wall-clock PDF metadata changed, which is why the hash differs.",
+  "note": "Release artifact for v0.13.2. First inspects the faculty-review declarations and sets the ORCID and a new release date. The round's first build (c0d2d54b...90f6, run 39718452985) had no layout defects but three wording issues about where the plan was recorded (W1-W3 in visual_inspection.md); they were corrected and this build re-inspected.",
   "history": [
     {
       "round": 1,
@@ -59,6 +60,12 @@
       "run": "31992993874",
       "pdf_sha256": "73dac58e8537d34ea88ebe995ce49b44b9601962daded6d020574f8f62cf9639",
       "result": "PASSED - no defects; release artifact"
+    },
+    {
+      "round": 6,
+      "run": "31995859922",
+      "pdf_sha256": "3dc678f40de5a7c2fc64f79191fd5488770dc8bed2e9fe7ea31d270106d4ae58",
+      "result": "PASSED - no defects; reproducible release artifact (v0.13.1)"
     }
   ]
 }
