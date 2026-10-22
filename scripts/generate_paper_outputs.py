@@ -80,7 +80,8 @@ def macro_name(key: str) -> str:
 CAPTIONS = {
     "table1_performance": "Realized performance, 2010--2026, net of 10 basis "
         "points. Annualized figures; maximum drawdown from the net wealth path.",
-    "table2_primary_inference": "Preregistered primary comparison. Paired "
+    "table2_primary_inference": "Prospectively specified primary comparison. "
+        "Paired "
         "stationary bootstrap, 10{,}000 replications, mean block 21 trading "
         "days, seed 12345, on daily excess returns.",
     "table3_secondary_intervals": "Secondary metric differences, regime-aware "
