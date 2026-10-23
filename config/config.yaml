@@ -16,7 +16,7 @@ manuscript:
   # the PDF hash that the visual inspection attests to, so the release
   # artifact would stop being reproducible the day after it was made.
   # Bump this deliberately when cutting a new manuscript release.
-  release_date: "2026-10-21"
+  release_date: "2026-10-23"
 
   # Author identifiers required on a submitted preprint. These stay
   # "PENDING" until registered; scripts/check_preprint.py refuses to
